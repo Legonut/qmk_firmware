@@ -91,6 +91,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ws2812_PORTREG  PORTD
 #define ws2812_DDRREG   DDRD
 
+#define DRIVER_COUNT      2
+#define DRIVER_LED_TOTAL  70
+// #define RGB_MATRIX_KEYPRESSES
 #define BACKLIGHT_PIN B7
 #define BACKLIGHT_LEVELS 5
 
@@ -107,10 +110,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef IOS_DEVICE_ENABLE
   #define RGBLIGHT_LIMIT_VAL 40
+  #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 40
 #elif RGBLIGHT_FULL_POWER
   #define RGBLIGHT_LIMIT_VAL 255
+  #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
 #else
-  #define RGBLIGHT_LIMIT_VAL 255
+  #define RGBLIGHT_LIMIT_VAL 120
+  #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
 #endif
 
 #define RGBLIGHT_VAL_STEP (RGBLIGHT_LIMIT_VAL / 10)

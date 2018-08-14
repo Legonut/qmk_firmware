@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "color.h"
-#include "is31fl3731.h"
+#include "ws2812.h"
 #include "quantum.h"
 
 typedef struct Point {

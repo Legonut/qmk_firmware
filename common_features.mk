@@ -116,8 +116,9 @@ endif
 
 ifeq ($(strip $(RGB_MATRIX_ENABLE)), yes)
     OPT_DEFS += -DRGB_MATRIX_ENABLE
-    SRC += is31fl3731.c
+    # SRC += is31fl3731.c
     SRC += i2c_master.c
+    SRC += ws2812.c
     SRC += $(QUANTUM_DIR)/color.c
     SRC += $(QUANTUM_DIR)/rgb_matrix.c
     CIE1931_CURVE = yes
