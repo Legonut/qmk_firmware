@@ -1,8 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "bootloader.h"
-#ifdef ENCODER_ENABLE
-#include "common/knob_v2.h"
-#endif
 #ifdef PROTOCOL_LUFA
 #include "lufa.h"
 #include "split_util.h"
@@ -74,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       RAISE,           KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   RGB_MOD, RESET,   KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
       KC_LSFT,         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
       KC_LCTL,         KC_LGUI, KC_LALT, RGB_TOG, RAISE,   KC_SPC, RGB_MOD, RGB_MOD, RAISE,   KC_MINS, KC_EQL,  KC_DOWN, KC_UP,   KC_DOWN, \
-                                                           KC_SPC, KC_DEL,  KC_SPC,  KC_SPC\
+                       KC_VOLD, KC_VOLU,                   KC_SPC, KC_DEL,  KC_SPC,  KC_SPC,           KC_VOLD, KC_VOLU \
       ),
 
   /* Colemak
@@ -97,8 +94,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,   RGB_MOD, RGB_MOD, KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_DEL, \
       KC_LCTL, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,   RESET,   RESET,   KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, \
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_LBRC, KC_RBRC, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-      KC_LCTL,  KC_ESC, KC_LALT, KC_LGUI, KC_PLUS, KC_SPC,  KC_SPC,  KC_SPC,  RAISE,   KC_MINS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, \
-                                                   KC_SPC,  KC_SPC,  KC_SPC,  RAISE \
+      KC_LCTL,  KC_ESC, KC_LALT, KC_LGUI, KC_PLUS, KC_SPC,  KC_SPC,  KC_SPC,  RAISE,  KC_MINS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, \
+                        KC_VOLD, KC_VOLU,          KC_SPC,  KC_SPC,  KC_SPC,  RAISE,           KC_VOLD, KC_VOLU \
       ),
 
   /* RAISEE
@@ -122,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, RGB_HUD, RGB_VAD, RGB_HUI, _______, _______, _______, _______, KC_F6,   KC_LEFT, KC_DOWN, KC_RGHT, KC_RBRC, KC_END, \
       _______, _______, _______, _______, _______, _______, _______, _______, KC_F12,  _______, _______, KC_PGDN, KC_PGUP, _______, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, \
-                                                   _______,  KC_DEL, _______, _______ \
+                        _______, _______,          _______,  KC_DEL, _______, _______,          _______, _______ \
       ),
 
   /* ADJUST
@@ -147,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, AU_ON,   AU_OFF,  AG_NORM, _______, _______, AG_SWAP, QWERTY,  _______, _______, _______, _______, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_SMOD,RGB_HUD, RGB_SAD, RGB_VAD, \
-                                                   _______, _______, _______, _______ \
+                        _______, _______,          _______, _______, _______, _______,          _______, _______ \
       )
 };
 
@@ -235,9 +232,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void matrix_init_user(void) {
-    #ifdef ENCODER_ENABLE
-        knob_init();  //FOR ENCODER
-    #endif
     #ifdef RGBLIGHT_ENABLE
       RGB_current_mode = rgblight_config.mode;
     #endif
@@ -258,22 +252,6 @@ __attribute__ ((weak))
 void led_test_init(void) {}
 
 void matrix_scan_user(void) {
-  #ifdef ENCODER_ENABLE
-    knob_report_t knob_report = knob_report_read();
-    knob_report_reset();
-    if (knob_report.phase) { // I check for phase to avoid handling the rotation twice (on 90 and 270 degrees).
-      while (knob_report.dir > 0) {
-        register_code(KC_VOLU);
-        unregister_code(KC_VOLU);
-        knob_report.dir--;
-      }
-      while (knob_report.dir < 0) {
-        register_code(KC_VOLD);
-        unregister_code(KC_VOLD);
-        knob_report.dir++;
-      }
-    }
-  #endif
      led_test_init();
      iota_gfx_task();  // this is what updates the display continuously
 }

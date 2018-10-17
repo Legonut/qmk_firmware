@@ -1,8 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "bootloader.h"
-#ifdef ENCODER_ENABLE
-#include "common/knob_v2.h"
-#endif
 #ifdef PROTOCOL_LUFA
 #include "lufa.h"
 #include "split_util.h"
@@ -78,7 +75,7 @@ LAYOUT( \
       FN_ESC,  _10,     _11,     _12,     _13,     _14,    RGB_SAI,  RGB_VAI, _15,     _16,     _17,     _18,     _19,     KC_QUOT, \
       KC_LSPO, _20,     _21,     _22,     _23,     _24,    RGB_SAD,  RGB_VAD, _25,     _26,     _27,     _28,     _29,     KC_RSPC, \
       KC_LCTL, KC_LGUI, KC_LGUI, KC_LALT, FN,      KC_SPC, FN,       FN,      KC_SPC,  KC_MINS, KC_EQL,  KC_DOWN, KC_PGUP, KC_PGDN, \
-                                                   KC_SPC, KC_BSPC,  KC_ENT,  KC_SPC\
+                        KC_VOLD, KC_VOLU,          KC_SPC, KC_BSPC,  KC_ENT,  KC_SPC,           KC_VOLD, KC_VOLU \
 )
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -135,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
    * | Shift|   ;  |   Q  |   J  |   K  |   X  |   [  |  |   ]  |   B  |   M  |   W  |   V  |   Z  |Enter |
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * |ADJ| Esc  | Alt  | GUI  | EISU |Lower |Space |  |Space |FN | KANA | Left | Down |  Up  |Right |
+   * |  ADJ | Esc  | Alt  | GUI  | EISU |Lower |Space |  |Space |FN | KANA | Left | Down |  Up  |Right |
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
    *                                    |Lower |Space |  |Space |FN |
    *                                    `-------------'  `------------'
@@ -146,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ADJ,     KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_RBRC, KC_END, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PGDN, KC_PGUP, _______, \
       _______, _______, _______, _______, ADJ,     _______, ADJ,     ADJ,     ADJ,     KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, \
-                                                   _______, KC_DEL,  _______, _______ \
+                        KC_VOLD, KC_VOLU,          _______, KC_DEL,  _______, _______,          KC_VOLD, KC_VOLU \
       ),
 
   /* ADJ
@@ -171,7 +168,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, RGB_HUD, RGB_VAD, RGB_HUI, RGBRST,  _______, _______, _______, _______, QWERTY,  COLEMAK, _______, _______, _______, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_SMOD,RGB_HUD, RGB_SAD, RGB_VAD, \
-                                                   _______, _______, _______, _______ \
+               KC_VOLD, KC_VOLU,          _______, _______, _______, _______,          KC_VOLD, KC_VOLU \
       )
 };
 
@@ -232,9 +229,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void matrix_init_user(void) {
-    #ifdef ENCODER_ENABLE
-        knob_init();  //FOR ENCODER
-    #endif
     #ifdef RGBLIGHT_ENABLE
       RGB_current_mode = rgblight_config.mode;
     #endif
@@ -242,6 +236,13 @@ void matrix_init_user(void) {
     #ifdef SSD1306OLED
         iota_gfx_init(!has_usb());   // turns on the display
     #endif
+}
+
+void matrix_scan_user(void) {
+  #ifdef SSD1306OLED
+    led_test_init();
+    iota_gfx_task();  // this is what updates the display continuously
+  #endif
 }
 
 
@@ -253,27 +254,6 @@ void matrix_init_user(void) {
 //   'led_test' keymap's led_test_init() force rgblight_mode_noeeprom(35);
 __attribute__ ((weak))
 void led_test_init(void) {}
-
-void matrix_scan_user(void) {
-  #ifdef ENCODER_ENABLE
-    knob_report_t knob_report = knob_report_read();
-    knob_report_reset();
-    if (knob_report.phase) { // I check for phase to avoid handling the rotation twice (on 90 and 270 degrees).
-      while (knob_report.dir > 0) {
-        register_code(KC_VOLU);
-        unregister_code(KC_VOLU);
-        knob_report.dir--;
-      }
-      while (knob_report.dir < 0) {
-        register_code(KC_VOLD);
-        unregister_code(KC_VOLD);
-        knob_report.dir++;
-      }
-    }
-  #endif
-     led_test_init();
-     iota_gfx_task();  // this is what updates the display continuously
-}
 
 void matrix_update(struct CharacterMatrix *dest,
                           const struct CharacterMatrix *source) {
