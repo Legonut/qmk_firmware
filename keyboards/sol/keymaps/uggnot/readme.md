@@ -1,6 +1,6 @@
-# KageUrufu's Sol Layout
+# UggNot's Sol Layout
 
-Read the keymap for the layout, I don't want to deal with maintained ascii art
+Read the keymap for the layout.
 
 ## Customize
 

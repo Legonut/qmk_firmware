@@ -22,15 +22,15 @@ extern uint8_t is_master;
 // entirely and just use numbers.
 enum layer_number {
     _QWERTY = 0,
-    _NUMPAD,
     _NAV_F,
+    _NUMPAD,
     _KB_CONTROL
 };
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
-  NUMPAD,
   NAVF,
+  NUMPAD,
   KBCTRL,
   RGBRST
 };
@@ -42,7 +42,10 @@ enum custom_keycodes {
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
 
-#define FN_ESC  LT(_FN, KC_ESC)
+#define FN_ESC  LT(_NAV_F, KC_ESC)
+#define LY_TYPE TT(_QWERTY)
+#define LY_KBC  TT(_KB_CONTROL)
+#define LY_NMPD TT(_NUMPAD)
 
 #define TAPPING_TOGGLE 2
 // Define your non-alpha grouping in this define's LAYOUT, and all your BASE_LAYERS will share the same mod/macro columns
@@ -54,11 +57,11 @@ enum custom_keycodes {
    * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
    * |Nv/Esc|      |      |      |      |      |      |  |      |      |      |      |      |      |      |
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * |LSFT/(|      |      |      |      |      |      |  | Del  |      |      |      |      |      |RSFT/)|
+   * |LSFT  |      |      |      |      |      |      |  | Del  |      |      |      |      |      |RSFT  |
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * | Ctrl |  Win |  Alt |Qwerty|KbCtrl|BCK SP|Numpad|  |Enter |Space |      |      |      |      |XXXXXX|
+   * | Ctrl |  Win |Qwerty| alt  |KbCtrl| Space|Numpad|  |Enter |Space |      |      |      |      |XXXXXX|
    * `-------------+------+------+------+------+------|  |------+------+------+------+------+-------------'
-   *               |XXXXXX|XXXXXX|      |BCK SP|Numpad|  |Enter |Space |      |XXXXXX|XXXXXX|
+   *               |XXXXXX|XXXXXX|      | Space|Numpad|  |Enter |Space |      |XXXXXX|XXXXXX|
    *               `------+------'      `-------------'  `-------------'      `-------------'
    */
 #define BASE_LAYOUT( \
@@ -69,40 +72,63 @@ enum custom_keycodes {
                                                   _49, _50, _51, _52 \
 ) \
 LAYOUT( \
-      _XX,                 _00,     _01,         _02,     _03,             _04,     _05,           _06,    _07,    _08, _09,   _10,  _11, KC_BSPC, \
-      KC_TAB,              _12,     _13,         _14,     _15,             _16,     _17,           _18,    _19,    _20, _21,   _22,  _23, _24, \
-      LT(_NAV_F, KC_ESC),  _25,     _26,         _27,     _28,             _29,     _30,           _31,    _32,    _33, _34,   _35,  _36, _37, \
-      KC_LSPO,             _38,     _39,         _40,     _41,             _42,     _43,           KC_DEL, _44,    _45, _46,   _47,  _48, KC_RSPC, \
-      KC_LCTL,             KC_LGUI, TT(_QWERTY), KC_LALT, TT(_KB_CONTROL), KC_BSPC, TT(_NUMPAD),   KC_ENT, KC_SPC, _49, _50,   _51,  _52, KC_ENT, \
-                                    XXXXXXX,     XXXXXXX,                  KC_BSPC, TT(_NUMPAD),   KC_ENT, KC_SPC,      KC_NO, KC_NO \
+      _XX    , _00    , _01    , _02    , _03    , _04    , _05    ,   _06    , _07    , _08    , _09    , _10    , _11    , KC_BSPC, \
+      KC_TAB , _12    , _13    , _14    , _15    , _16    , _17    ,   _18    , _19    , _20    , _21    , _22    , _23    , _24    , \
+      FN_ESC , _25    , _26    , _27    , _28    , _29    , _30    ,   _31    , _32    , _33    , _34    , _35    , _36    , _37    , \
+      KC_LSFT, _38    , _39    , _40    , _41    , _42    , _43    ,   KC_DEL , _44    , _45    , _46    , _47    , _48    , KC_RSFT, \
+      KC_LCTL, KC_LGUI, LY_TYPE, KC_LALT, LY_KBC , KC_SPC , LY_NMPD,   KC_ENT , KC_SPC , _49    , _50    , _51    , _52    , KC_ENT , \
+                        XXXXXXX, XXXXXXX,          KC_SPC , LY_NMPD,   KC_ENT , KC_SPC ,          XXXXXXX, XXXXXXX  \
 )
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Qwerty
    * ,------------------------------------------------.  ,------------------------------------------------.
-   * |   `  |   1  |   2  |   3  |   4  |   5  |  =   |  |   7  |   8  |   9  |   0  |   -  |   =  |______|
+   * |   `  |   1  |   2  |   3  |   4  |   5  |  6   |  | MENU |   7  |   8  |   9  |   0  |   -  |______|
    * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
-   * |______|   Q  |   W  |   E  |   R  |   T  |  [   |  |   ]  |   Y  |   U  |   I  |   O  |   P  |  \   |
+   * |______|   Q  |   W  |   E  |   R  |   T  |XXXXXX|  |XXXXXX|   Y  |   U  |   I  |   O  |   P  |  \   |
    * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
    * |______|   A  |   S  |   D  |   F  |   G  |PRTSCR|  |  INS |   H  |   J  |   K  |   L  |   ;  |  '   |
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
    * |______|   Z  |   X  |   C  |   V  |   B  |PAUSE |  |______|   N  |   M  |   ,  |   .  |   /  |______|
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * |______|______|______|______|______|______|______|  |______|______| ALT  | WIN  | MENU | CTRL |______|
+   * |______|______|______|______|______|______|______|  |______|______| ALT  | WIN  |   .  | CTRL |______|
    * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
    *               |______|______|      |______|______|  |______|______|      |______|______|
    *               `-------------'      `-------------'  `-------------'      `-------------'
    */
   [_QWERTY] = BASE_LAYOUT( \
-      KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_EQL,     KC_6,    KC_7, KC_8,    KC_9,    KC_0,    KC_MINS, \
-              KC_Q, KC_W, KC_E, KC_R, KC_T, KC_LBRC,    KC_RBRC, KC_Y, KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS, \
-              KC_A, KC_S, KC_D, KC_F, KC_G, KC_PSCR,    KC_INS,  KC_H, KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-              KC_Z, KC_X, KC_C, KC_V, KC_B, KC_PAUS,             KC_N, KC_M,    KC_COMM, KC_DOT,  KC_SLSH, \
-                                                                       KC_RALT, KC_RWIN, KC_APP,  KC_RCTL \
+      KC_GRV , KC_1   , KC_2  , KC_3   , KC_4   , KC_5   , KC_6   ,   KC_APP , KC_7   , KC_8   , KC_9   , KC_0   , KC_MINS, \
+               KC_Q   , KC_W  , KC_E   , KC_R   , KC_T   , KC_VOLD,   KC_VOLU, KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSLS, \
+               KC_A   , KC_S  , KC_D   , KC_F   , KC_G   , KC_PSCR,   KC_INS , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT, \
+               KC_Z   , KC_X  , KC_C   , KC_V   , KC_B   , KC_PAUS,            KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, \
+                                                                                        KC_RALT, KC_RWIN, KC_DOT , KC_RCTL  \
+  ),
+
+  /* Nav/F Keys
+   * ,------------------------------------------------.  ,------------------------------------------------.
+   * |XXXXXX|  f1  |  f2  |  f3  |  f4  |  f5  |  f6  |  |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|   =  |______|
+   * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
+   * |______|  f7  |  f8  |  f9  |  f10 |  f11 |  f12 |  |XXXXXX| PGUP | HOME |  UP  | END  |   [  |   ]  |
+   * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
+   * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |XXXXXX| PGDN |  LT  |  DN  | RT   |XXXXXX|XXXXXX|
+   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
+   * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|______|
+   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
+   * |______|______|______|______|______|______|______|  |______|______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|______|
+   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
+   *               |______|______|      |______|______|  |______|______|      |______|______|
+   *               `-------------'      `-------------'  `-------------'      `-------------'
+   */
+  [_NAV_F] = BASE_LAYOUT( \
+      XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  ,  KC_F5  , KC_F6  ,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_EQL , \
+               KC_F7  , KC_F8  , KC_F9  , KC_F10 ,  KC_F11 , KC_F12 ,   XXXXXXX, KC_PGUP, KC_HOME, KC_UP  , KC_END , KC_LBRC, KC_RBRC, \
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, \
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+                                                                                          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
   ),
 
   /* Num Pad
    * ,------------------------------------------------.  ,------------------------------------------------.
-   * |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |NUM LK|XXXXXX|XXXXXX|  /   |  *   |XXXXXX|______|
+   * |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |NUM LK|XXXXXX|XXXXXX|  /   |  *   |  =   |______|
    * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
    * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |CAPSLK|XXXXXX|  7   |  8   |  9   |  -   |XXXXXX|
    * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
@@ -116,34 +142,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *               `-------------'      `-------------'  `-------------'      `-------------'
    */
   [_NUMPAD] = BASE_LAYOUT( \
-      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NLCK, KC_NO, KC_NO,   KC_PSLS, KC_PAST, KC_NO,  \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_CAPS, KC_NO, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS, KC_NO, \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_SLCK, KC_NO, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_NO, \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,             KC_NO, KC_KP_1, KC_KP_2, KC_KP_3, KC_NO, \
-                                                                          KC_KP_0, KC_KP_0, KC_PDOT, KC_NO \
-  ),
-
-  /* Nav/F Keys
-   * ,------------------------------------------------.  ,------------------------------------------------.
-   * |XXXXXX|  f1  |  f2  |  f3  |  f4  |  f5  |  f6  |  |  f7  |  f8  |  f9  |  f10 |  f11 |  f12 |______|
-   * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
-   * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |XXXXXX|XXXXXX| HOME |  UP  | END  | PGUP |XXXXXX|
-   * |------+------+------+------+------+------|------|  |------|------+------+------+------+------+------|
-   * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |XXXXXX|XXXXXX|  LT  |  DN  | RT   | PGDN |XXXXXX|
-   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|  |______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|______|
-   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   * |______|______|______|______|______|______|______|  |______|______|XXXXXX|XXXXXX|XXXXXX|XXXXXX|______|
-   * |------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-   *               |______|______|      |______|______|  |______|______|      |______|______|
-   *               `-------------'      `-------------'  `-------------'      `-------------'
-   */
-  [_NAV_F] = BASE_LAYOUT( \
-      KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,    KC_F7, KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,  \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_NO, \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO,  KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO, \
-             KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,           KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-                                                                         KC_NO,   KC_NO,   KC_NO,   KC_NO \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_NLCK, XXXXXXX, XXXXXXX, KC_PSLS, KC_PAST, KC_EQL , \
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_CAPS, XXXXXXX, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS, XXXXXXX, \
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_SLCK, XXXXXXX, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, XXXXXXX, \
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            XXXXXXX, KC_KP_1, KC_KP_2, KC_KP_3, XXXXXXX, \
+                                                                                         KC_KP_0, KC_KP_0, KC_PDOT, XXXXXXX  \
   ),
 
   /* KB CONTROL
@@ -162,11 +165,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *               `-------------'      `-------------'  `-------------'      `-------------'
    */
   [_KB_CONTROL] = BASE_LAYOUT( \
-      RESET, RGB_TOG, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  \
-             KC_NO,   RGB_M_K, RGB_M_X, RGB_M_G, RGB_M_T,  KC_NO,       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-             RGB_HUI, RGB_SAI, RGB_VAI, KC_NO,   KC_NO,    RGB_MOD,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-             RGB_HUD, RGB_SAD, RGB_VAD, KC_NO,   KC_NO,    RGB_RMOD,           KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-                                                                                      KC_NO, KC_NO, KC_NO, KC_NO \
+      RESET  , RGB_TOG, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+               XXXXXXX, RGB_M_K, RGB_M_X, RGB_M_G, RGB_M_T , XXXXXXX ,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+               RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX , RGB_MOD ,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+               RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX , RGB_RMOD,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+                                                                                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
   )
 
 };
