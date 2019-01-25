@@ -1,5 +1,4 @@
-#ifndef ZEN_H
-#define ZEN_H
+#pragma once
 
 #if KEYBOARD_zen_rev1
     #include "rev1.h"
@@ -7,5 +6,3 @@
     #include "rev2.h"
 #endif
 #include "quantum.h"
-
-#endif
