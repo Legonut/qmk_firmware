@@ -42,9 +42,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
-
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5
 
@@ -58,13 +55,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-#define BACKLIGHT_PIN F4
-#define BACKLIGHT_LEVELS 5
-
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D1
-
+#define RGB_DI_PIN B6
 #define RGBLED_NUM 16    // Number of LEDs
 
 /*
