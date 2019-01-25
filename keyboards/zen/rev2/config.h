@@ -15,13 +15,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef REV1_CONFIG_H
-#define REV1_CONFIG_H
+#ifndef REV2_CONFIG_H
+#define REV2_CONFIG_H
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xCEEB
 #define PRODUCT_ID      0x1256
-#define DEVICE_VER      0x0200
+#define DEVICE_VER      0x0201
 #define MANUFACTURER    Legonut
 #define PRODUCT         Project Zen
 #define DESCRIPTION     Split gaming keyboard
@@ -32,13 +32,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 7
 
 // wiring of each half
-#define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { B2, B3, B1, F7, F6, D4, B6 }
+#define MATRIX_ROW_PINS { C6, D7, E7, B4, B5 }
+#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2 }
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-#define SOFT_SERIAL_PIN   D0
+#define SOFT_SERIAL_PIN   D3
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
