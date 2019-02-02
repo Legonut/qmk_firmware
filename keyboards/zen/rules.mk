@@ -4,6 +4,9 @@ ifneq ($(strip $(USE_PROTON_C)),)
 
   SPLIT_KEYBOARD = no
   RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
+
+  EXTRAFLAGS += -DUSE_PROTON_C
+  LDFLAGS += -specs=nano.specs -specs=nosys.specs
 else
   # Pro Micro or Elite-C
   MCU = atmega32u4
@@ -16,7 +19,6 @@ else
   # Currently moved to Pro Micro only section because of lack of Proton-C support
   SPLIT_KEYBOARD = yes
   RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
-
 endif
 
 

@@ -18,11 +18,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "config_common.h"
-
-#undef  RGBLED_NUM
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 16
-
-#ifndef TAPPING_TERM
-#define TAPPING_TERM 100
-#endif
