@@ -13,12 +13,13 @@ else
   F_CPU = 16000000
   ARCH = AVR8
   F_USB = $(F_CPU)
-  BOOTLOADER = caterina
+  BOOTLOADER = dfu
   OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
   # Currently moved to Pro Micro only section because of lack of Proton-C support
   SPLIT_KEYBOARD = yes
   RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
+  ENCODER_ENABLE = yes
 endif
 
 
