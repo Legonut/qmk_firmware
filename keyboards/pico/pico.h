@@ -16,11 +16,8 @@
 
 #pragma once
 
-#ifdef KEYBOARD_pico_65keys
-    #include "65keys.h"
-#endif
-#ifdef KEYBOARD_pico_70keys
-    #include "70keys.h"
+#ifdef KEYBOARD_pico_rev1
+    #include "rev1.h"
 #endif
 
 #include "quantum.h"

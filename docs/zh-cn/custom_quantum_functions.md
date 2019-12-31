@@ -1,31 +1,31 @@
-# å¦‚ä½•å®šåˆ¶ä½ é”®ç›˜çš„åŠŸèƒ½
+# ÈçºÎ¶¨ÖÆÄã¼üÅÌµÄ¹¦ÄÜ
 
-å¯¹äºŽå¾ˆå¤šäººæ¥è¯´å®¢åˆ¶åŒ–é”®ç›˜å¯ä¸åªæ˜¯å‘ä½ çš„ç”µè„‘å‘é€ä½ æŒ‰äº†é‚£ä¸ªä»¶è¿™ä¹ˆç®€å•ã€‚ä½ è‚¯å®šæƒ³å®žçŽ°æ¯”ç®€å•æŒ‰é”®å’Œå®æ›´å¤æ‚çš„åŠŸèƒ½ã€‚QMKæœ‰èƒ½è®©ä½ æ³¨å…¥ä»£ç çš„é’©å­, è¦†ç›–åŠŸèƒ½, å¦å¤–ï¼Œè¿˜å¯ä»¥è‡ªå®šä¹‰é”®ç›˜åœ¨ä¸åŒæƒ…å†µä¸‹çš„è¡Œä¸ºã€‚
+¶ÔÓÚºÜ¶àÈËÀ´Ëµ¿ÍÖÆ»¯¼üÅÌ¿É²»Ö»ÊÇÏòÄãµÄµçÄÔ·¢ËÍÄã°´ÁËÄÇ¸ö¼þÕâÃ´¼òµ¥¡£Äã¿Ï¶¨ÏëÊµÏÖ±È¼òµ¥°´¼üºÍºê¸ü¸´ÔÓµÄ¹¦ÄÜ¡£QMKÓÐÄÜÈÃÄã×¢Èë´úÂëµÄ¹³×Ó, ¸²¸Ç¹¦ÄÜ, ÁíÍâ£¬»¹¿ÉÒÔ×Ô¶¨Òå¼üÅÌÔÚ²»Í¬Çé¿öÏÂµÄÐÐÎª¡£
 
-æœ¬é¡µä¸å‡å®šä»»ä½•ç‰¹æ®Šçš„QMKçŸ¥è¯†ï¼Œä½†é˜…è¯»[ç†è§£QMK](understanding_qmk.md)å°†ä¼šåœ¨æ›´åŸºç¡€çš„å±‚é¢å¸®ä½ ç†è§£å‘ç”Ÿäº†ä»€ä¹ˆã€‚
+±¾Ò³²»¼Ù¶¨ÈÎºÎÌØÊâµÄQMKÖªÊ¶£¬µ«ÔÄ¶Á[Àí½âQMK](understanding_qmk.md)½«»áÔÚ¸ü»ù´¡µÄ²ãÃæ°ïÄãÀí½â·¢ÉúÁËÊ²Ã´¡£
 
-## A Word on Core vs é”®ç›˜ vs å¸ƒå±€
+## A Word on Core vs ¼üÅÌ vs ²¼¾Ö
 
-æˆ‘ä»¬æŠŠqmkç»„ç»‡æˆä¸€ä¸ªå±‚æ¬¡ç»“æž„ï¼š
+ÎÒÃÇ°Ñqmk×éÖ¯³ÉÒ»¸ö²ã´Î½á¹¹£º
 
 * Core (`_quantum`)
   * Keyboard/Revision (`_kb`)
     * Keymap (`_user`)
 
-ä¸‹é¢æè¿°çš„æ¯ä¸€ä¸ªå‡½æ•°éƒ½å¯ä»¥åœ¨å®šä¹‰ä¸ŠåŠ ä¸€ä¸ª`_kb()`æˆ– `_user()` åŽç¼€ã€‚ å»ºè®®åœ¨é”®ç›˜/ä¿®è®¢å±‚ä½¿ç”¨`_kb()`åŽç¼€ï¼Œåœ¨å¸ƒå±€å±‚ä½¿ç”¨`_user()`åŽç¼€ã€‚
+ÏÂÃæÃèÊöµÄÃ¿Ò»¸öº¯Êý¶¼¿ÉÒÔÔÚ¶¨ÒåÉÏ¼ÓÒ»¸ö`_kb()`»ò `_user()` ºó×º¡£ ½¨ÒéÔÚ¼üÅÌ/ÐÞ¶©²ãÊ¹ÓÃ`_kb()`ºó×º£¬ÔÚ²¼¾Ö²ãÊ¹ÓÃ`_user()`ºó×º¡£
 
-åœ¨é”®ç›˜/ä¿®è®¢å±‚å®šä¹‰å‡½æ•°æ—¶ï¼Œ`_kb()`åœ¨æ‰§è¡Œä»»ä½•ä»£ç å‰å…ˆè°ƒç”¨`_user()`æ˜¯å¿…è¦çš„ï¼Œä¸ç„¶å¸ƒå±€å±‚å‡½æ•°å°±ä¸è¦è¢«è°ƒç”¨ã€‚
-<!-- ç¿»è¯‘é—®é¢˜ï¼šä¸Šé¢é‚£å¥ç¿»è¯‘çš„ä¸å¤ªå¥½-->
-# è‡ªå®šä¹‰é”®ç 
+ÔÚ¼üÅÌ/ÐÞ¶©²ã¶¨Òåº¯ÊýÊ±£¬`_kb()`ÔÚÖ´ÐÐÈÎºÎ´úÂëÇ°ÏÈµ÷ÓÃ`_user()`ÊÇ±ØÒªµÄ£¬²»È»²¼¾Ö²ãº¯Êý¾Í²»Òª±»µ÷ÓÃ¡£
+<!-- ·­ÒëÎÊÌâ£ºÉÏÃæÄÇ¾ä·­ÒëµÄ²»Ì«ºÃ-->
+# ×Ô¶¨Òå¼üÂë
 
-åˆ°ç›®å‰ä¸ºæ­¢ï¼Œæœ€å¸¸è§çš„ä»»åŠ¡æ˜¯æ›´æ”¹çŽ°æœ‰é”®ç çš„è¡Œä¸ºæˆ–åˆ›å»ºæ–°çš„é”®ç ã€‚ä»Žä»£ç è§’åº¦æ¥çœ‹è¿™äº›æ“ä½œéƒ½å¾ˆç›¸ä¼¼ã€‚
+µ½Ä¿Ç°ÎªÖ¹£¬×î³£¼ûµÄÈÎÎñÊÇ¸ü¸ÄÏÖÓÐ¼üÂëµÄÐÐÎª»ò´´½¨ÐÂµÄ¼üÂë¡£´Ó´úÂë½Ç¶ÈÀ´¿´ÕâÐ©²Ù×÷¶¼ºÜÏàËÆ¡£
 
-## å®šä¹‰ä¸€ä¸ªæ–°é”®ç 
+## ¶¨ÒåÒ»¸öÐÂ¼üÂë
 
-åˆ›å»ºé”®ç ç¬¬ä¸€æ­¥ï¼Œå…ˆæžšä¸¾å‡ºå®ƒå…¨éƒ¨ï¼Œä¹Ÿå°±æ˜¯ç»™é”®ç èµ·ä¸ªåå­—å¹¶åˆ†é…å”¯ä¸€æ•°å€¼ã€‚QMKæ²¡æœ‰ç›´æŽ¥é™åˆ¶æœ€å¤§é”®ç å€¼å¤§å°ï¼Œè€Œæ˜¯æä¾›äº†ä¸€ä¸ª`SAFE_RANGE`å®ã€‚ä½ å¯ä»¥åœ¨æžšä¸¾æ—¶ç”¨`SAFE_RANGE`æ¥ä¿è¯ä½ å–å¾—äº†å”¯ä¸€çš„é”®ç å€¼ã€‚
+´´½¨¼üÂëµÚÒ»²½£¬ÏÈÃ¶¾Ù³öËüÈ«²¿£¬Ò²¾ÍÊÇ¸ø¼üÂëÆð¸öÃû×Ö²¢·ÖÅäÎ¨Ò»ÊýÖµ¡£QMKÃ»ÓÐÖ±½ÓÏÞÖÆ×î´ó¼üÂëÖµ´óÐ¡£¬¶øÊÇÌá¹©ÁËÒ»¸ö`SAFE_RANGE`ºê¡£Äã¿ÉÒÔÔÚÃ¶¾ÙÊ±ÓÃ`SAFE_RANGE`À´±£Ö¤ÄãÈ¡µÃÁËÎ¨Ò»µÄ¼üÂëÖµ¡£
 
 
-è¿™æœ‰æžšä¸¾ä¸¤ä¸ªé”®ç çš„ä¾‹å­ã€‚æŠŠè¿™å—åŠ åˆ°`keymap.c`çš„è¯ä½ å°±åœ¨å¸ƒå±€ä¸­èƒ½ç”¨`FOO`å’Œ`BAR`äº†ã€‚
+ÕâÓÐÃ¶¾ÙÁ½¸ö¼üÂëµÄÀý×Ó¡£°ÑÕâ¿é¼Óµ½`keymap.c`µÄ»°Äã¾ÍÔÚ²¼¾ÖÖÐÄÜÓÃ`FOO`ºÍ`BAR`ÁË¡£
 
 ```c
 enum my_keycodes {
@@ -34,46 +34,46 @@ enum my_keycodes {
 };
 ```
 
-## ä¸ºé”®ç çš„è¡Œä¸ºç¼–ç¨‹
+## Îª¼üÂëµÄÐÐÎª±à³Ì
 
-å½“ä½ è¦†ç›–ä¸€ä¸ªå·²å­˜åœ¨æŒ‰é”®çš„è¡Œä¸ºæ—¶ï¼Œæˆ–å°†è¿™ä¸ªè¡Œä¸ºèµ‹ç»™æ–°é”®æ—¶ï¼Œä½ è¦ç”¨`process_record_kb()`å’Œ`process_record_user()`å‡½æ•°ã€‚è¿™ä¿©å‡½æ•°åœ¨é”®å¤„ç†ä¸­çœŸå®žé”®äº‹ä»¶è¢«å¤„ç†å‰è¢«QMKè°ƒç”¨ã€‚å¦‚æžœè¿™ä¿©å‡½æ•°è¿”å›ž`true`ï¼ŒQMKå°†ä¼šç”¨æ­£å¸¸çš„æ–¹å¼å¤„ç†é”®ç ã€‚è¿™æ ·å¯ä»¥å¾ˆæ–¹ä¾¿çš„æ‰©å±•é”®ç çš„åŠŸèƒ½è€Œä¸æ˜¯æ›¿æ¢å®ƒã€‚å¦‚æžœå‡½æ•°è¿”å›ž`false` QMKä¼šè·³è¿‡æ­£å¸¸é”®å¤„ç†ï¼Œç„¶åŽå‘é€é”®å­æŠ¬èµ·è¿˜æ˜¯æŒ‰ä¸‹äº‹ä»¶å°±ç”±ä½ å†³å®šäº†ã€‚
+µ±Äã¸²¸ÇÒ»¸öÒÑ´æÔÚ°´¼üµÄÐÐÎªÊ±£¬»ò½«Õâ¸öÐÐÎª¸³¸øÐÂ¼üÊ±£¬ÄãÒªÓÃ`process_record_kb()`ºÍ`process_record_user()`º¯Êý¡£ÕâÁ©º¯ÊýÔÚ¼ü´¦ÀíÖÐÕæÊµ¼üÊÂ¼þ±»´¦ÀíÇ°±»QMKµ÷ÓÃ¡£Èç¹ûÕâÁ©º¯Êý·µ»Ø`true`£¬QMK½«»áÓÃÕý³£µÄ·½Ê½´¦Àí¼üÂë¡£ÕâÑù¿ÉÒÔºÜ·½±ãµÄÀ©Õ¹¼üÂëµÄ¹¦ÄÜ¶ø²»ÊÇÌæ»»Ëü¡£Èç¹ûº¯Êý·µ»Ø`false` QMK»áÌø¹ýÕý³£¼ü´¦Àí£¬È»ºó·¢ËÍ¼ü×ÓÌ§Æð»¹ÊÇ°´ÏÂÊÂ¼þ¾ÍÓÉÄã¾ö¶¨ÁË¡£
 
-å½“æŸä¸ªé”®æŒ‰ä¸‹æˆ–é‡Šæ”¾æ—¶è¿™ä¿©å‡½æ•°ä¼šè¢«è°ƒç”¨ã€‚
+µ±Ä³¸ö¼ü°´ÏÂ»òÊÍ·ÅÊ±ÕâÁ©º¯Êý»á±»µ÷ÓÃ¡£
 
-### process_record_user()`å‡½æ•°ç¤ºä¾‹å®žçŽ°
+### process_record_user()`º¯ÊýÊ¾ÀýÊµÏÖ
 
-è¿™ä¸ªä¾‹å­åšäº†ä¸¤ä¸ªäº‹ã€‚è‡ªå®šä¹‰äº†ä¸€ä¸ªå«åš`FOO`çš„é”®ç çš„è¡Œä¸ºï¼Œå¹¶è¡¥å……äº†åœ¨æŒ‰ä¸‹å›žè½¦æ—¶æ’­æ”¾éŸ³ç¬¦ã€‚
+Õâ¸öÀý×Ó×öÁËÁ½¸öÊÂ¡£×Ô¶¨ÒåÁËÒ»¸ö½Ð×ö`FOO`µÄ¼üÂëµÄÐÐÎª£¬²¢²¹³äÁËÔÚ°´ÏÂ»Ø³µÊ±²¥·ÅÒô·û¡£
 
 ```c
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case FOO:
       if (record->event.pressed) {
-        // æŒ‰ä¸‹æ—¶åšäº›ä»€ä¹ˆ
+        // °´ÏÂÊ±×öÐ©Ê²Ã´
       } else {
-        // é‡Šæ”¾æ—¶åšäº›ä»€ä¹ˆ
+        // ÊÍ·ÅÊ±×öÐ©Ê²Ã´
       }
-      return false; // è·³è¿‡æ­¤é”®çš„æ‰€æœ‰è¿›ä¸€æ­¥å¤„ç†
+      return false; // Ìø¹ý´Ë¼üµÄËùÓÐ½øÒ»²½´¦Àí
     case KC_ENTER:
-      // å½“æŒ‰ä¸‹å›žè½¦æ—¶æ’­æ”¾éŸ³ç¬¦
+      // µ±°´ÏÂ»Ø³µÊ±²¥·ÅÒô·û
       if (record->event.pressed) {
         PLAY_NOTE_ARRAY(tone_qwerty);
       }
-      return true; // è®©QMKè§¦å‘å›žè½¦æŒ‰ä¸‹/é‡Šæ”¾äº‹ä»¶
+      return true; // ÈÃQMK´¥·¢»Ø³µ°´ÏÂ/ÊÍ·ÅÊÂ¼þ
     default:
-      return true; // æ­£å¸¸å¤„ç†å…¶ä»–é”®ç 
+      return true; // Õý³£´¦ÀíÆäËû¼üÂë
   }
 }
 ```
 
-### `process_record_*` å‡½æ•°æ–‡æ¡£
+### `process_record_*` º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `bool process_record_kb(uint16_t keycode, keyrecord_t *record)`
-* å¸ƒå±€: `bool process_record_user(uint16_t keycode, keyrecord_t *record)`
+* ¼üÅÌ/ÐÞ¶©: `bool process_record_kb(uint16_t keycode, keyrecord_t *record)`
+* ²¼¾Ö: `bool process_record_user(uint16_t keycode, keyrecord_t *record)`
 
-`keycode(é”®ç )`å‚æ•°æ˜¯åœ¨å¸ƒå±€ä¸Šå®šä¹‰çš„ï¼Œæ¯”å¦‚`MO(1)`, `KC_L`, ç­‰ç­‰ã€‚ ä½ è¦ç”¨ `switch...case` å—æ¥å¤„ç†è¿™äº›äº‹ä»¶ã€‚
+`keycode(¼üÂë)`²ÎÊýÊÇÔÚ²¼¾ÖÉÏ¶¨ÒåµÄ£¬±ÈÈç`MO(1)`, `KC_L`, µÈµÈ¡£ ÄãÒªÓÃ `switch...case` ¿éÀ´´¦ÀíÕâÐ©ÊÂ¼þ¡£
 
-`record`å‚æ•°å«æœ‰å®žé™…æŒ‰é”®çš„ä¿¡æ¯ï¼š
+`record`²ÎÊýº¬ÓÐÊµ¼Ê°´¼üµÄÐÅÏ¢£º
 
 ```c
 keyrecord_t record {
@@ -88,9 +88,9 @@ keyrecord_t record {
 }
 ```
 
-# LEDæŽ§åˆ¶
+# LED¿ØÖÆ
 
-qmkæä¾›äº†è¯»å–HIDè§„èŒƒåŒ…å«çš„5ä¸ªLEDçš„æ–¹æ³•ã€‚:
+qmkÌá¹©ÁË¶ÁÈ¡HID¹æ·¶°üº¬µÄ5¸öLEDµÄ·½·¨¡£:
 
 * `USB_LED_NUM_LOCK`
 * `USB_LED_CAPS_LOCK`
@@ -98,20 +98,20 @@ qmkæä¾›äº†è¯»å–HIDè§„èŒƒåŒ…å«çš„5ä¸ªLEDçš„æ–¹æ³•ã€‚:
 * `USB_LED_COMPOSE`
 * `USB_LED_KANA`
 
-è¿™äº”ä¸ªå¸¸é‡å¯¹åº”äºŽä¸»æœºLEDçŠ¶æ€çš„ä½ç½®ä½ã€‚
-æœ‰ä¸¤ç§æ–¹æ³•å¯ä»¥èŽ·å¾—ä¸»æœºLEDçŠ¶æ€ï¼š
+ÕâÎå¸ö³£Á¿¶ÔÓ¦ÓÚÖ÷»úLED×´Ì¬µÄÎ»ÖÃÎ»¡£
+ÓÐÁ½ÖÖ·½·¨¿ÉÒÔ»ñµÃÖ÷»úLED×´Ì¬£º
 
-* é€šè¿‡æ‰§è¡Œ `led_set_user()`
-* é€šè¿‡è°ƒç”¨ `host_keyboard_leds()`
+* Í¨¹ýÖ´ÐÐ `led_set_user()`
+* Í¨¹ýµ÷ÓÃ `host_keyboard_leds()`
 
 ## `led_set_user()`
 
-å½“5ä¸ªLEDä¸­ä»»ä½•ä¸€ä¸ªçš„çŠ¶æ€éœ€è¦æ”¹å˜æ—¶ï¼Œæ­¤å‡½æ•°å°†è¢«è°ƒç”¨ã€‚æ­¤å‡½æ•°é€šè¿‡å‚æ•°è¾“å…¥LEDå‚æ•°ã€‚
-ä½¿ç”¨`IS_LED_ON(usb_led, led_name)`å’Œ`IS_LED_OFF(usb_led, led_name)`è¿™ä¸¤ä¸ªå®æ¥æ£€æŸ¥LEDçŠ¶æ€ã€‚
+µ±5¸öLEDÖÐÈÎºÎÒ»¸öµÄ×´Ì¬ÐèÒª¸Ä±äÊ±£¬´Ëº¯Êý½«±»µ÷ÓÃ¡£´Ëº¯ÊýÍ¨¹ý²ÎÊýÊäÈëLED²ÎÊý¡£
+Ê¹ÓÃ`IS_LED_ON(usb_led, led_name)`ºÍ`IS_LED_OFF(usb_led, led_name)`ÕâÁ½¸öºêÀ´¼ì²éLED×´Ì¬¡£
 
-!> `host_keyboard_leds()`å¯èƒ½ä¼šåœ¨`led_set_user()`è¢«è°ƒç”¨å‰è¿”å›žæ–°å€¼ã€‚
+!> `host_keyboard_leds()`¿ÉÄÜ»áÔÚ`led_set_user()`±»µ÷ÓÃÇ°·µ»ØÐÂÖµ¡£
 
-### `led_set_user()`å‡½æ•°ç¤ºä¾‹å®žçŽ°
+### `led_set_user()`º¯ÊýÊ¾ÀýÊµÏÖ
 
 ```c
 void led_set_user(uint8_t usb_led) {
@@ -143,59 +143,59 @@ void led_set_user(uint8_t usb_led) {
 }
 ```
 
-### `led_set_*`å‡½æ•°æ–‡æ¡£
+### `led_set_*`º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void led_set_kb(uint8_t usb_led)`
-* å¸ƒå±€: `void led_set_user(uint8_t usb_led)`
+* ¼üÅÌ/ÐÞ¶©: `void led_set_kb(uint8_t usb_led)`
+* ²¼¾Ö: `void led_set_user(uint8_t usb_led)`
 
 ## `host_keyboard_leds()`
 
-è°ƒç”¨è¿™ä¸ªå‡½æ•°ä¼šè¿”å›žæœ€åŽæ”¶åˆ°çš„LEDçŠ¶æ€ã€‚è¿™ä¸ªå‡½æ•°åœ¨`led_set_*`ä¹‹å¤–è¯»å–LEDçŠ¶æ€æ—¶å¾ˆæœ‰ç”¨ï¼Œæ¯”å¦‚åœ¨[`matrix_scan_user()`](#çŸ©é˜µæ‰«æä»£ç ).
-ä¸ºäº†ä¾¿æ·ï¼Œä½ å¯ä»¥ç”¨`IS_HOST_LED_ON(led_name)`å’Œ`IS_HOST_LED_OFF(led_name)` å®ï¼Œè€Œä¸ç›´æŽ¥è°ƒç”¨å’Œæ£€æŸ¥`host_keyboard_leds()`ã€‚
+µ÷ÓÃÕâ¸öº¯Êý»á·µ»Ø×îºóÊÕµ½µÄLED×´Ì¬¡£Õâ¸öº¯ÊýÔÚ`led_set_*`Ö®Íâ¶ÁÈ¡LED×´Ì¬Ê±ºÜÓÐÓÃ£¬±ÈÈçÔÚ[`matrix_scan_user()`](#¾ØÕóÉ¨Ãè´úÂë).
+ÎªÁË±ã½Ý£¬Äã¿ÉÒÔÓÃ`IS_HOST_LED_ON(led_name)`ºÍ`IS_HOST_LED_OFF(led_name)` ºê£¬¶ø²»Ö±½Óµ÷ÓÃºÍ¼ì²é`host_keyboard_leds()`¡£
 
-## è®¾ç½®ç‰©ç†LEDçŠ¶æ€
+## ÉèÖÃÎïÀíLED×´Ì¬
 
-ä¸€äº›é”®ç›˜å®žçŽ°äº†ä¸ºè®¾ç½®ç‰©ç†LEDçš„çŠ¶æ€æä¾›äº†æ–¹ä¾¿çš„æ–¹æ³•ã€‚
+Ò»Ð©¼üÅÌÊµÏÖÁËÎªÉèÖÃÎïÀíLEDµÄ×´Ì¬Ìá¹©ÁË·½±ãµÄ·½·¨¡£
 
 ### Ergodox Boards
 
-Ergodoxå®žçŽ°äº†æä¾›`ergodox_right_led_1`/`2`/`3_on`/`off()`æ¥è®©æ¯ä¸ªLEDå¼€æˆ–å…³, ä¹Ÿå¯ä»¥ç”¨ `ergodox_right_led_on`/`off(uint8_t led)` æŒ‰ç´¢å¼•æ‰“å¼€æˆ–å…³é—­ä»–ä»¬ã€‚
+ErgodoxÊµÏÖÁËÌá¹©`ergodox_right_led_1`/`2`/`3_on`/`off()`À´ÈÃÃ¿¸öLED¿ª»ò¹Ø, Ò²¿ÉÒÔÓÃ `ergodox_right_led_on`/`off(uint8_t led)` °´Ë÷Òý´ò¿ª»ò¹Ø±ÕËûÃÇ¡£
 
-æ­¤å¤–ï¼Œè¿˜å¯ä»¥ä½¿ç”¨`ergodox_led_all_set(uint8_t n)`æŒ‡å®šæ‰€æœ‰LEDçš„äº®åº¦çº§åˆ«ï¼›é’ˆå¯¹æ¯ä¸ªLEDç”¨`ergodox_right_led_1`/`2`/`3_set(uint8_t n)`ï¼›ä½¿ç”¨ç´¢å¼•çš„è¯ç”¨`ergodox_right_led_set(uint8_t led, uint8_t n)`ã€‚
+´ËÍâ£¬»¹¿ÉÒÔÊ¹ÓÃ`ergodox_led_all_set(uint8_t n)`Ö¸¶¨ËùÓÐLEDµÄÁÁ¶È¼¶±ð£»Õë¶ÔÃ¿¸öLEDÓÃ`ergodox_right_led_1`/`2`/`3_set(uint8_t n)`£»Ê¹ÓÃË÷ÒýµÄ»°ÓÃ`ergodox_right_led_set(uint8_t led, uint8_t n)`¡£
 
-Ergodox boards åŒæ—¶å®šä¹‰äº†æœ€ä½Žäº®åº¦çº§åˆ«`LED_BRIGHTNESS_LO`å’Œæœ€é«˜äº®åº¦çº§åˆ«`LED_BRIGHTNESS_HI`(é»˜è®¤æœ€é«˜).
+Ergodox boards Í¬Ê±¶¨ÒåÁË×îµÍÁÁ¶È¼¶±ð`LED_BRIGHTNESS_LO`ºÍ×î¸ßÁÁ¶È¼¶±ð`LED_BRIGHTNESS_HI`(Ä¬ÈÏ×î¸ß).
 
-# é”®ç›˜åˆå§‹åŒ–ä»£ç 
+# ¼üÅÌ³õÊ¼»¯´úÂë
 
-é”®ç›˜åˆå§‹åŒ–è¿‡ç¨‹æœ‰å‡ ä¸ªæ­¥éª¤ã€‚ä½ æ˜¯ç”¨é‚£ä¸ªå‡½æ•°å–å†³äºŽä½ æƒ³è¦åšä»€ä¹ˆã€‚
+¼üÅÌ³õÊ¼»¯¹ý³ÌÓÐ¼¸¸ö²½Öè¡£ÄãÊÇÓÃÄÇ¸öº¯ÊýÈ¡¾öÓÚÄãÏëÒª×öÊ²Ã´¡£
 
-æœ‰ä¸‰ä¸ªä¸»è¦åˆå§‹åŒ–å‡½æ•°ï¼ŒæŒ‰è°ƒç”¨é¡ºåºåˆ—å‡ºã€‚
+ÓÐÈý¸öÖ÷Òª³õÊ¼»¯º¯Êý£¬°´µ÷ÓÃË³ÐòÁÐ³ö¡£
 
-* `keyboard_pre_init_*` - ä¼šåœ¨å¤§å¤šæ•°å…¶ä»–ä¸œè¥¿è¿è¡Œå‰è¿è¡Œã€‚é€‚ç”¨äºŽå“ªäº›éœ€è¦æå‰è¿è¡Œçš„ç¡¬ä»¶åˆå§‹åŒ–ã€‚
-* `matrix_init_*` - åœ¨å›ºä»¶å¯åŠ¨è¿‡ç¨‹ä¸­é—´è¢«è°ƒç”¨ã€‚æ­¤æ—¶ç¡¬ä»¶å·²åˆå§‹åŒ–ï¼ŒåŠŸèƒ½å°šæœªåˆå§‹åŒ–ã€‚
-* `keyboard_post_init_*` - åœ¨å›ºä»¶å¯åŠ¨è¿‡ç¨‹æœ€åŽè¢«è°ƒç”¨ã€‚å¤§å¤šæ•°æƒ…å†µä¸‹ï¼Œä½ çš„â€œå®¢åˆ¶åŒ–â€ä»£ç éƒ½å¯ä»¥æ”¾åœ¨è¿™é‡Œã€‚
+* `keyboard_pre_init_*` - »áÔÚ´ó¶àÊýÆäËû¶«Î÷ÔËÐÐÇ°ÔËÐÐ¡£ÊÊÓÃÓÚÄÄÐ©ÐèÒªÌáÇ°ÔËÐÐµÄÓ²¼þ³õÊ¼»¯¡£
+* `matrix_init_*` - ÔÚ¹Ì¼þÆô¶¯¹ý³ÌÖÐ¼ä±»µ÷ÓÃ¡£´ËÊ±Ó²¼þÒÑ³õÊ¼»¯£¬¹¦ÄÜÉÐÎ´³õÊ¼»¯¡£
+* `keyboard_post_init_*` - ÔÚ¹Ì¼þÆô¶¯¹ý³Ì×îºó±»µ÷ÓÃ¡£´ó¶àÊýÇé¿öÏÂ£¬ÄãµÄ¡°¿ÍÖÆ»¯¡±´úÂë¶¼¿ÉÒÔ·ÅÔÚÕâÀï¡£
 
-!> å¯¹äºŽå¤§å¤šæ•°äººæ¥è¯´`keyboard_post_init_user`æ˜¯ä½ æƒ³è¦è°ƒç”¨çš„å‡½æ•°ã€‚ä¾‹å¦‚, æ­¤æ—¶ä½ å¯ä»¥è®¾ç½®RGBç¯å‘å…‰ã€‚
+!> ¶ÔÓÚ´ó¶àÊýÈËÀ´Ëµ`keyboard_post_init_user`ÊÇÄãÏëÒªµ÷ÓÃµÄº¯Êý¡£ÀýÈç, ´ËÊ±Äã¿ÉÒÔÉèÖÃRGBµÆ·¢¹â¡£
 
-## é”®ç›˜é¢„åˆå§‹åŒ–ä»£ç 
+## ¼üÅÌÔ¤³õÊ¼»¯´úÂë
 
-è¿™ä»£ç æžæ—©è¿è¡Œï¼Œç”šè‡³éƒ½åœ¨USBåˆå§‹åŒ–å‰è¿è¡Œã€‚
+Õâ´úÂë¼«ÔçÔËÐÐ£¬ÉõÖÁ¶¼ÔÚUSB³õÊ¼»¯Ç°ÔËÐÐ¡£
 
-åœ¨è¿™ä¹‹åŽä¸ä¹…çŸ©é˜µå°±è¢«åˆå§‹åŒ–äº†ã€‚
+ÔÚÕâÖ®ºó²»¾Ã¾ØÕó¾Í±»³õÊ¼»¯ÁË¡£
 
-å¯¹äºŽå¤§å¤šæ•°ç”¨æˆ·æ¥è¯´,è¿™ç”¨ä¸åˆ°ï¼Œå› ä¸ºå®ƒä¸»è¦æ˜¯ç”¨äºŽé¢å‘ç¡¬ä»¶çš„åˆå§‹åŒ–ã€‚
+¶ÔÓÚ´ó¶àÊýÓÃ»§À´Ëµ,ÕâÓÃ²»µ½£¬ÒòÎªËüÖ÷ÒªÊÇÓÃÓÚÃæÏòÓ²¼þµÄ³õÊ¼»¯¡£
 
-ä½†å¦‚æžœä½ æœ‰ç¡¬ä»¶åˆå§‹åŒ–çš„è¯æ”¾åœ¨è¿™é‡Œå†å¥½ä¸è¿‡äº†(æ¯”å¦‚åˆå§‹åŒ–LEDå¼•è„šä¸€ç±»çš„).
+µ«Èç¹ûÄãÓÐÓ²¼þ³õÊ¼»¯µÄ»°·ÅÔÚÕâÀïÔÙºÃ²»¹ýÁË(±ÈÈç³õÊ¼»¯LEDÒý½ÅÒ»ÀàµÄ).
 
-### `keyboard_pre_init_user()`å‡½æ•°ç¤ºä¾‹å®žçŽ°
+### `keyboard_pre_init_user()`º¯ÊýÊ¾ÀýÊµÏÖ
 
-æœ¬ä¾‹ä¸­åœ¨é”®ç›˜çº§åˆ«ï¼Œè®¾å®š B0, B1, B2, B3, å’Œ B4 æ˜¯LEDå¼•è„šã€‚
+±¾ÀýÖÐÔÚ¼üÅÌ¼¶±ð£¬Éè¶¨ B0, B1, B2, B3, ºÍ B4 ÊÇLEDÒý½Å¡£
 
 ```c
 void keyboard_pre_init_user(void) {
-  // è°ƒç”¨é”®ç›˜é¢„åˆå§‹åŒ–ä»£ç 
+  // µ÷ÓÃ¼üÅÌÔ¤³õÊ¼»¯´úÂë
 
-  // è®¾ç½®LEDå¼•è„šä¸ºè¾“å‡ºæ¨¡å¼
+  // ÉèÖÃLEDÒý½ÅÎªÊä³öÄ£Ê½
   setPinOutput(B0);
   setPinOutput(B1);
   setPinOutput(B2);
@@ -204,73 +204,73 @@ void keyboard_pre_init_user(void) {
 }
 ```
 
-### `keyboard_pre_init_*` å‡½æ•°æ–‡æ¡£
+### `keyboard_pre_init_*` º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void keyboard_pre_init_kb(void)`
-* å¸ƒå±€: `void keyboard_pre_init_user(void)`
+* ¼üÅÌ/ÐÞ¶©: `void keyboard_pre_init_kb(void)`
+* ²¼¾Ö: `void keyboard_pre_init_user(void)`
 
-## çŸ©é˜µåˆå§‹åŒ–ä»£ç 
+## ¾ØÕó³õÊ¼»¯´úÂë
 
-è¿™å°†ä¼šåœ¨çŸ©é˜µåˆå§‹åŒ–æ—¶è¢«è°ƒç”¨ï¼Œåœ¨æŸäº›ç¡¬ä»¶è®¾ç½®å¥½åŽï¼Œä½†åœ¨ä¸€äº›åŠŸèƒ½è¢«åˆå§‹åŒ–å‰ã€‚ 
+Õâ½«»áÔÚ¾ØÕó³õÊ¼»¯Ê±±»µ÷ÓÃ£¬ÔÚÄ³Ð©Ó²¼þÉèÖÃºÃºó£¬µ«ÔÚÒ»Ð©¹¦ÄÜ±»³õÊ¼»¯Ç°¡£ 
 
-è¿™åœ¨ä½ è®¾ç½®å…¶ä»–åœ°æ–¹ä¼šç”¨åˆ°çš„ä¸œè¥¿çš„æ—¶å€™ä¼šå¾ˆæœ‰ç”¨ï¼Œä½†ä¸Žç¡¬ä»¶æ— å…³ï¼Œä¹Ÿä¸ä¾èµ–äºŽå®ƒçš„å¯åŠ¨ä½ç½®ã€‚
-
-
-### `matrix_init_*`å‡½æ•°æ–‡æ¡£
-
-* é”®ç›˜/ä¿®è®¢: `void matrix_init_kb(void)`
-* å¸ƒå±€: `void matrix_init_user(void)`
+ÕâÔÚÄãÉèÖÃÆäËûµØ·½»áÓÃµ½µÄ¶«Î÷µÄÊ±ºò»áºÜÓÐÓÃ£¬µ«ÓëÓ²¼þÎÞ¹Ø£¬Ò²²»ÒÀÀµÓÚËüµÄÆô¶¯Î»ÖÃ¡£
 
 
-## é”®ç›˜åŽåˆå§‹åŒ–ä»£ç 
+### `matrix_init_*`º¯ÊýÎÄµµ
 
-è¿™æ˜¯é”®ç›˜åˆå§‹åŒ–è¿‡ç¨‹ä¸­çš„æœ€åŽä¸€ä¸ªä»»åŠ¡ã€‚å¦‚æžœæ‚¨æƒ³æ›´æ”¹æŸäº›ç‰¹æ€§ï¼Œè¿™ä¼šå¾ˆæœ‰ç”¨ï¼Œå› ä¸ºæ­¤æ—¶åº”è¯¥å¯¹å®ƒä»¬è¿›è¡Œåˆå§‹åŒ–ã€‚
+* ¼üÅÌ/ÐÞ¶©: `void matrix_init_kb(void)`
+* ²¼¾Ö: `void matrix_init_user(void)`
 
 
-### `keyboard_post_init_user()`ç¤ºä¾‹å®žçŽ°
+## ¼üÅÌºó³õÊ¼»¯´úÂë
 
-æœ¬ç¤ºä¾‹åœ¨æ‰€æœ‰åˆå§‹åŒ–å®ŒæˆåŽè¿è¡Œï¼Œé…ç½®RGBç¯ã€‚
+ÕâÊÇ¼üÅÌ³õÊ¼»¯¹ý³ÌÖÐµÄ×îºóÒ»¸öÈÎÎñ¡£Èç¹ûÄúÏë¸ü¸ÄÄ³Ð©ÌØÐÔ£¬Õâ»áºÜÓÐÓÃ£¬ÒòÎª´ËÊ±Ó¦¸Ã¶ÔËüÃÇ½øÐÐ³õÊ¼»¯¡£
+
+
+### `keyboard_post_init_user()`Ê¾ÀýÊµÏÖ
+
+±¾Ê¾ÀýÔÚËùÓÐ³õÊ¼»¯Íê³ÉºóÔËÐÐ£¬ÅäÖÃRGBµÆ¡£
 
 ```c
 void keyboard_post_init_user(void) {
-  // è°ƒç”¨åŽåˆå§‹åŒ–ä»£ç 
-  rgblight_enable_noeeprom(); // ä½¿èƒ½Rgbï¼Œä¸ä¿å­˜è®¾ç½®
-  rgblight_sethsv_noeeprom(180, 255, 255); // å°†é¢œè‰²è®¾ç½®åˆ°è“ç»¿è‰²(é’è‰²)ä¸ä¿å­˜
-  rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3); // è®¾ç½®å¿«é€Ÿå‘¼å¸æ¨¡å¼ä¸ä¿å­˜
+  // µ÷ÓÃºó³õÊ¼»¯´úÂë
+  rgblight_enable_noeeprom(); // Ê¹ÄÜRgb£¬²»±£´æÉèÖÃ
+  rgblight_sethsv_noeeprom(180, 255, 255); // ½«ÑÕÉ«ÉèÖÃµ½À¶ÂÌÉ«(ÇàÉ«)²»±£´æ
+  rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3); // ÉèÖÃ¿ìËÙºôÎüÄ£Ê½²»±£´æ
 }
 ```
 
-### `keyboard_post_init_*` å‡½æ•°æ–‡æ¡£
+### `keyboard_post_init_*` º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void keyboard_post_init_kb(void)`
-* å¸ƒå±€: `void keyboard_post_init_user(void)`
+* ¼üÅÌ/ÐÞ¶©: `void keyboard_post_init_kb(void)`
+* ²¼¾Ö: `void keyboard_post_init_user(void)`
 
-# çŸ©é˜µæ‰«æä»£ç 
+# ¾ØÕóÉ¨Ãè´úÂë
 
-å¯èƒ½çš„è¯ä½ è¦ç”¨`process_record_*()`è‡ªå®šä¹‰é”®ç›˜ï¼Œä»¥è¿™ç§æ–¹å¼è¿žæŽ¥åˆ°äº‹ä»¶ä¸­ï¼Œä»¥ç¡®ä¿ä»£ç ä¸ä¼šå¯¹é”®ç›˜äº§ç”Ÿè´Ÿé¢çš„æ€§èƒ½å½±å“ã€‚ç„¶è€Œï¼Œåœ¨æžå°‘æ•°æƒ…å†µä¸‹ï¼Œæœ‰å¿…è¦è¿›è¡ŒçŸ©é˜µæ‰«æã€‚åœ¨è¿™äº›å‡½æ•°ä¸­è¦ç‰¹åˆ«æ³¨æ„ä»£ç çš„æ€§èƒ½ï¼Œå› ä¸ºå®ƒæ¯ç§’è‡³å°‘è¢«è°ƒç”¨10æ¬¡ã€‚
+¿ÉÄÜµÄ»°ÄãÒªÓÃ`process_record_*()`×Ô¶¨Òå¼üÅÌ£¬ÒÔÕâÖÖ·½Ê½Á¬½Óµ½ÊÂ¼þÖÐ£¬ÒÔÈ·±£´úÂë²»»á¶Ô¼üÅÌ²úÉú¸ºÃæµÄÐÔÄÜÓ°Ïì¡£È»¶ø£¬ÔÚ¼«ÉÙÊýÇé¿öÏÂ£¬ÓÐ±ØÒª½øÐÐ¾ØÕóÉ¨Ãè¡£ÔÚÕâÐ©º¯ÊýÖÐÒªÌØ±ð×¢Òâ´úÂëµÄÐÔÄÜ£¬ÒòÎªËüÃ¿ÃëÖÁÉÙ±»µ÷ÓÃ10´Î¡£
 
-### `matrix_scan_*`ç¤ºä¾‹å®žçŽ°
+### `matrix_scan_*`Ê¾ÀýÊµÏÖ
 
-è¿™ä¸ªä¾‹å­è¢«æ•…æ„çœç•¥äº†ã€‚åœ¨hookè¿™æ ·ä¸€ä¸ªå¯¹æ€§èƒ½åŠå…¶æ•æ„Ÿçš„åŒºåŸŸä¹‹å‰ï¼Œæ‚¨åº”è¯¥è¶³å¤Ÿäº†è§£qmkçš„å†…éƒ¨ç»“æž„ï¼Œä»¥ä¾¿åœ¨æ²¡æœ‰ç¤ºä¾‹çš„æƒ…å†µä¸‹ç¼–å†™ã€‚å¦‚æžœä½ éœ€è¦å¸®åŠ©ï¼Œè¯·[å»ºç«‹ä¸€ä¸ªissue](https://github.com/qmk/qmk_firmware/issues/new)æˆ–[åœ¨Discordä¸Šä¸Žæˆ‘ä»¬äº¤æµ](https://discord.gg/Uq7gcHh).
+Õâ¸öÀý×Ó±»¹ÊÒâÊ¡ÂÔÁË¡£ÔÚhookÕâÑùÒ»¸ö¶ÔÐÔÄÜ¼°ÆäÃô¸ÐµÄÇøÓòÖ®Ç°£¬ÄúÓ¦¸Ã×ã¹»ÁË½âqmkµÄÄÚ²¿½á¹¹£¬ÒÔ±ãÔÚÃ»ÓÐÊ¾ÀýµÄÇé¿öÏÂ±àÐ´¡£Èç¹ûÄãÐèÒª°ïÖú£¬Çë[½¨Á¢Ò»¸öissue](https://github.com/qmk/qmk_firmware/issues/new)»ò[ÔÚDiscordÉÏÓëÎÒÃÇ½»Á÷](https://discord.gg/Uq7gcHh).
 
-### `matrix_scan_*` å‡½æ•°æ–‡æ¡£
+### `matrix_scan_*` º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void matrix_scan_kb(void)`
-* å¸ƒå±€: `void matrix_scan_user(void)`
+* ¼üÅÌ/ÐÞ¶©: `void matrix_scan_kb(void)`
+* ²¼¾Ö: `void matrix_scan_user(void)`
 
-è¯¥å‡½æ•°åœ¨æ¯æ¬¡çŸ©é˜µæ‰«ææ—¶è¢«è°ƒç”¨ï¼Œè¿™åŸºæœ¬ä¸ŽMCUå¤„ç†èƒ½åŠ›ä¸Šé™ç›¸åŒã€‚åœ¨è¿™é‡Œå†™ä»£ç è¦è°¨æ…Žï¼Œå› ä¸ºå®ƒä¼šè¿è¡Œå¾ˆå¤šæ¬¡ã€‚
+¸Ãº¯ÊýÔÚÃ¿´Î¾ØÕóÉ¨ÃèÊ±±»µ÷ÓÃ£¬Õâ»ù±¾ÓëMCU´¦ÀíÄÜÁ¦ÉÏÏÞÏàÍ¬¡£ÔÚÕâÀïÐ´´úÂëÒª½÷É÷£¬ÒòÎªËü»áÔËÐÐºÜ¶à´Î¡£
 
-ä½ ä¼šåœ¨è‡ªå®šä¹‰çŸ©é˜µæ‰«æä»£ç æ—¶ç”¨åˆ°è¿™ä¸ªå‡½æ•°ã€‚è¿™ä¹Ÿå¯ä»¥ç”¨ä½œè‡ªå®šä¹‰çŠ¶æ€è¾“å‡º(æ¯”å¦‚LEDç¯æˆ–è€…å±å¹•)æˆ–è€…å…¶ä»–å³ä¾¿ç”¨æˆ·ä¸è¾“å…¥ä½ ä¹Ÿæƒ³å®šæœŸè¿è¡Œçš„åŠŸèƒ½ã€‚
-
-
-# é”®ç›˜ ç©ºé—²/å”¤é†’ ä»£ç 
-
-å¦‚æžœé”®ç›˜æ”¯æŒå°±å¯ä»¥é€šè¿‡åœæ­¢ä¸€å¤§ç¥¨åŠŸèƒ½æ¥è¾¾åˆ°"ç©ºé—²"ã€‚RGBç¯å’ŒèƒŒå…‰å°±æ˜¯å¾ˆå¥½çš„ä¾‹å­ã€‚è¿™å¯ä»¥èŠ‚çº¦èƒ½è€—ï¼Œä¹Ÿå¯èƒ½è®©ä½ é”®ç›˜é£Žå‘³æ›´ä½³ã€‚
-
-ç”¨ä¸¤ä¸ªå‡½æ•°æŽ§åˆ¶: `suspend_power_down_*`å’Œ`suspend_wakeup_init_*`, åˆ†åˆ«åœ¨ç³»ç»Ÿæ¿ç©ºé—²å’Œå”¤é†’æ—¶è°ƒç”¨ã€‚
+Äã»áÔÚ×Ô¶¨Òå¾ØÕóÉ¨Ãè´úÂëÊ±ÓÃµ½Õâ¸öº¯Êý¡£ÕâÒ²¿ÉÒÔÓÃ×÷×Ô¶¨Òå×´Ì¬Êä³ö(±ÈÈçLEDµÆ»òÕßÆÁÄ»)»òÕßÆäËû¼´±ãÓÃ»§²»ÊäÈëÄãÒ²Ïë¶¨ÆÚÔËÐÐµÄ¹¦ÄÜ¡£
 
 
-### suspend_power_down_user()å’Œsuspend_wakeup_init_user()ç¤ºä¾‹å®žçŽ°
+# ¼üÅÌ ¿ÕÏÐ/»½ÐÑ ´úÂë
+
+Èç¹û¼üÅÌÖ§³Ö¾Í¿ÉÒÔÍ¨¹ýÍ£Ö¹Ò»´óÆ±¹¦ÄÜÀ´´ïµ½"¿ÕÏÐ"¡£RGBµÆºÍ±³¹â¾ÍÊÇºÜºÃµÄÀý×Ó¡£Õâ¿ÉÒÔ½ÚÔ¼ÄÜºÄ£¬Ò²¿ÉÄÜÈÃÄã¼üÅÌ·çÎ¶¸ü¼Ñ¡£
+
+ÓÃÁ½¸öº¯Êý¿ØÖÆ: `suspend_power_down_*`ºÍ`suspend_wakeup_init_*`, ·Ö±ðÔÚÏµÍ³°å¿ÕÏÐºÍ»½ÐÑÊ±µ÷ÓÃ¡£
+
+
+### suspend_power_down_user()ºÍsuspend_wakeup_init_user()Ê¾ÀýÊµÏÖ
 
 
 ```c
@@ -283,18 +283,18 @@ void suspend_wakeup_init_user(void) {
 }
 ```
 
-### é”®ç›˜ æŒ‚èµ·/å”¤é†’ å‡½æ•°æ–‡æ¡£
+### ¼üÅÌ ¹ÒÆð/»½ÐÑ º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void suspend_power_down_kb(void)` å’Œ`void suspend_wakeup_init_user(void)`
-* å¸ƒå±€: `void suspend_power_down_kb(void)` å’Œ `void suspend_wakeup_init_user(void)`
+* ¼üÅÌ/ÐÞ¶©: `void suspend_power_down_kb(void)` ºÍ`void suspend_wakeup_init_user(void)`
+* ²¼¾Ö: `void suspend_power_down_kb(void)` ºÍ `void suspend_wakeup_init_user(void)`
 
-# å±‚æ”¹å˜ä»£ç 
+# ²ã¸Ä±ä´úÂë
 
-æ¯å½“å±‚æ”¹å˜è¿™ä¸ªå°±è¿è¡Œä»£ç ã€‚è¿™å¯¹äºŽå±‚æŒ‡ç¤ºæˆ–è‡ªå®šä¹‰å±‚å¤„ç†å¾ˆæœ‰ç”¨ã€‚
+Ã¿µ±²ã¸Ä±äÕâ¸ö¾ÍÔËÐÐ´úÂë¡£Õâ¶ÔÓÚ²ãÖ¸Ê¾»ò×Ô¶¨Òå²ã´¦ÀíºÜÓÐÓÃ¡£
 
-### `layer_state_set_*` ç¤ºä¾‹å®žçŽ°
+### `layer_state_set_*` Ê¾ÀýÊµÏÖ
 
-æœ¬ä¾‹ä½¿ç”¨äº†Plancké”®ç›˜ç¤ºèŒƒäº†å¦‚ä½•è®¾ç½® [RGBèƒŒå…‰ç¯](feature_rgblight.md)ä½¿ä¹‹ä¸Žå±‚å¯¹åº”
+±¾ÀýÊ¹ÓÃÁËPlanck¼üÅÌÊ¾·¶ÁËÈçºÎÉèÖÃ [RGB±³¹âµÆ](feature_rgblight.md)Ê¹Ö®Óë²ã¶ÔÓ¦
 
 ```c
 uint32_t layer_state_set_user(uint32_t state) {
@@ -318,31 +318,31 @@ uint32_t layer_state_set_user(uint32_t state) {
   return state;
 }
 ```
-### `layer_state_set_*` å‡½æ•°æ–‡æ¡£
+### `layer_state_set_*` º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `uint32_t layer_state_set_kb(uint32_t state)`
-* å¸ƒå±€: `uint32_t layer_state_set_user(uint32_t state)`
-
-
-è¯¥`çŠ¶æ€`æ˜¯æ´»åŠ¨å±‚çš„bitmask, è¯¦è§[å¸ƒå±€æ¦‚è¿°](keymap.md#å¸ƒå±€çš„å±‚çŠ¶æ€)
+* ¼üÅÌ/ÐÞ¶©: `uint32_t layer_state_set_kb(uint32_t state)`
+* ²¼¾Ö: `uint32_t layer_state_set_user(uint32_t state)`
 
 
-# æŽ‰ç”µä¿å­˜é…ç½® (EEPROM)
-
-è¿™ä¼šè®©ä½ çš„é…ç½®é•¿æœŸçš„ä¿å­˜åœ¨é”®ç›˜ä¸­ã€‚è¿™äº›é…ç½®ä¿å­˜åœ¨ä½ ä¸»æŽ§çš„EEPROMé‡Œï¼ŒæŽ‰ç”µä¸ä¼šæ¶ˆå¤±ã€‚ è®¾ç½®å¯ä»¥ç”¨`eeconfig_read_kb`å’Œ`eeconfig_read_user`è¯»å–ï¼Œå¯ä»¥ç”¨`eeconfig_update_kb`å’Œ`eeconfig_update_user`å†™å…¥ã€‚è¿™å¯¹äºŽæ‚¨å¸Œæœ›èƒ½å¤Ÿåˆ‡æ¢çš„åŠŸèƒ½å¾ˆæœ‰ç”¨(æ¯”å¦‚åˆ‡æ¢RGBå±‚æŒ‡ç¤ºã€‚æ­¤å¤–ï¼Œä½ å¯ä»¥ç”¨`eeconfig_init_kb`å’Œ`eeconfig_init_user`æ¥è®¾ç½®EEPROMé»˜è®¤å€¼ã€‚ 
-
-æœ€å¤æ‚çš„éƒ¨åˆ†å¯èƒ½æ˜¯ï¼Œæœ‰å¾ˆå¤šæ–¹æ³•å¯ä»¥é€šè¿‡EEPROMå­˜å‚¨å’Œè®¿é—®æ•°æ®ï¼Œå¹¶ä¸”å¹¶æ²¡æœ‰ç”¨å“ªç§æ–¹æ³•æ˜¯â€œæ”¿æ²»æ­£ç¡®â€çš„ã€‚ä½ æ¯ä¸ªåŠŸèƒ½åªæœ‰ä¸€ä¸ªåŒå­—(å››å­—èŠ‚)ç©ºé—´ã€‚
-
-è®°ä½EEPROMæ˜¯æœ‰å†™å…¥å¯¿å‘½çš„ã€‚å°½ç®¡å†™å…¥å¯¿å‘½å¾ˆé«˜ï¼Œä½†æ˜¯å¹¶ä¸æ˜¯åªæœ‰è®¾ç½®å†™é“EEPROMä¸­ã€‚å¦‚æžœä½ å†™å…¥é¢‘ç¹ï¼Œä½ çš„MCUå¯¿å‘½å°†ä¼šå˜çŸ­ã€‚
-
-* å¦‚æžœæ‚¨ä¸ç†è§£è¿™ä¸ªä¾‹å­ï¼Œé‚£ä¹ˆæ‚¨å¯èƒ½å¸Œæœ›é¿å…ä½¿ç”¨è¿™ä¸ªç‰¹æ€§ï¼Œå› ä¸ºå®ƒç›¸å½“å¤æ‚ã€‚
-
-### ç¤ºä¾‹å®žçŽ°
-
-æœ¬ä¾‹è®²è§£äº†å¦‚ä½•æ·»åŠ è®¾ç½®ï¼Œå¹¶ä¸”è¯»å†™ã€‚æœ¬é‡Œä½¿ç”¨äº†ç”¨æˆ·å¸ƒå±€ã€‚è¿™æ˜¯ä¸€ä¸ªå¤æ‚çš„å‡½æ•°ï¼Œæœ‰å¾ˆå¤šäº‹æƒ…è¦åšã€‚å®žé™…ä¸Šï¼Œå®ƒä½¿ç”¨äº†å¾ˆå¤šä¸Šè¿°å‡½æ•°æ¥å·¥ä½œï¼
+¸Ã`×´Ì¬`ÊÇ»î¶¯²ãµÄbitmask, Ïê¼û[²¼¾Ö¸ÅÊö](keymap.md#²¼¾ÖµÄ²ã×´Ì¬)
 
 
-åœ¨ä½ çš„keymap.cæ–‡ä»¶ä¸­ï¼Œå°†ä»¥ä¸‹ä»£ç æ·»åŠ è‡³é¡¶éƒ¨:
+# µôµç±£´æÅäÖÃ (EEPROM)
+
+Õâ»áÈÃÄãµÄÅäÖÃ³¤ÆÚµÄ±£´æÔÚ¼üÅÌÖÐ¡£ÕâÐ©ÅäÖÃ±£´æÔÚÄãÖ÷¿ØµÄEEPROMÀï£¬µôµç²»»áÏûÊ§¡£ ÉèÖÃ¿ÉÒÔÓÃ`eeconfig_read_kb`ºÍ`eeconfig_read_user`¶ÁÈ¡£¬¿ÉÒÔÓÃ`eeconfig_update_kb`ºÍ`eeconfig_update_user`Ð´Èë¡£Õâ¶ÔÓÚÄúÏ£ÍûÄÜ¹»ÇÐ»»µÄ¹¦ÄÜºÜÓÐÓÃ(±ÈÈçÇÐ»»RGB²ãÖ¸Ê¾¡£´ËÍâ£¬Äã¿ÉÒÔÓÃ`eeconfig_init_kb`ºÍ`eeconfig_init_user`À´ÉèÖÃEEPROMÄ¬ÈÏÖµ¡£ 
+
+×î¸´ÔÓµÄ²¿·Ö¿ÉÄÜÊÇ£¬ÓÐºÜ¶à·½·¨¿ÉÒÔÍ¨¹ýEEPROM´æ´¢ºÍ·ÃÎÊÊý¾Ý£¬²¢ÇÒ²¢Ã»ÓÐÓÃÄÄÖÖ·½·¨ÊÇ¡°ÕþÖÎÕýÈ·¡±µÄ¡£ÄãÃ¿¸ö¹¦ÄÜÖ»ÓÐÒ»¸öË«×Ö(ËÄ×Ö½Ú)¿Õ¼ä¡£
+
+¼Ç×¡EEPROMÊÇÓÐÐ´ÈëÊÙÃüµÄ¡£¾¡¹ÜÐ´ÈëÊÙÃüºÜ¸ß£¬µ«ÊÇ²¢²»ÊÇÖ»ÓÐÉèÖÃÐ´µÀEEPROMÖÐ¡£Èç¹ûÄãÐ´ÈëÆµ·±£¬ÄãµÄMCUÊÙÃü½«»á±ä¶Ì¡£
+
+* Èç¹ûÄú²»Àí½âÕâ¸öÀý×Ó£¬ÄÇÃ´Äú¿ÉÄÜÏ£Íû±ÜÃâÊ¹ÓÃÕâ¸öÌØÐÔ£¬ÒòÎªËüÏàµ±¸´ÔÓ¡£
+
+### Ê¾ÀýÊµÏÖ
+
+±¾Àý½²½âÁËÈçºÎÌí¼ÓÉèÖÃ£¬²¢ÇÒ¶ÁÐ´¡£±¾ÀïÊ¹ÓÃÁËÓÃ»§²¼¾Ö¡£ÕâÊÇÒ»¸ö¸´ÔÓµÄº¯Êý£¬ÓÐºÜ¶àÊÂÇéÒª×ö¡£Êµ¼ÊÉÏ£¬ËüÊ¹ÓÃÁËºÜ¶àÉÏÊöº¯ÊýÀ´¹¤×÷£¡
+
+
+ÔÚÄãµÄkeymap.cÎÄ¼þÖÐ£¬½«ÒÔÏÂ´úÂëÌí¼ÓÖÁ¶¥²¿:
 ```c
 typedef union {
   uint32_t raw;
@@ -354,19 +354,19 @@ typedef union {
 user_config_t user_config;
 ```
 
-ä»¥ä¸Šä»£ç å»ºç«‹äº†ä¸€ä¸ªç»“æž„ä½“ï¼Œè¯¥ç»“æž„ä½“å¯ä»¥å­˜å‚¨è®¾ç½®å¹¶å¯ç”¨äºŽå†™å…¥EEPROMã€‚å¦‚æ­¤è¿™èˆ¬å°†æ— éœ€å®šä¹‰å˜é‡ï¼Œå› ä¸ºåœ¨ç»“æž„ä½“ä¸­å·²ç„¶å®šä¹‰ã€‚è¦è®°ä½`bool` (å¸ƒå°”)å€¼ä½¿ç”¨1ä½, `uint8_t`ä½¿ç”¨8ä½, `uint16_t`ä½¿ç”¨16ä½ã€‚ä½ å¯ä»¥æ··åˆæ­é…ä½¿ç”¨ï¼Œä½†æ˜¯é¡ºåºè®°é”™å¯èƒ½ä¼šæ‹›è‡´éº»çƒ¦ï¼Œå› ä¸ºé‚£ä¼šæ”¹å˜å†™å…¥å†™å‡ºçš„å€¼ã€‚ 
+ÒÔÉÏ´úÂë½¨Á¢ÁËÒ»¸ö½á¹¹Ìå£¬¸Ã½á¹¹Ìå¿ÉÒÔ´æ´¢ÉèÖÃ²¢¿ÉÓÃÓÚÐ´ÈëEEPROM¡£Èç´ËÕâ°ã½«ÎÞÐè¶¨Òå±äÁ¿£¬ÒòÎªÔÚ½á¹¹ÌåÖÐÒÑÈ»¶¨Òå¡£Òª¼Ç×¡`bool` (²¼¶û)ÖµÊ¹ÓÃ1Î», `uint8_t`Ê¹ÓÃ8Î», `uint16_t`Ê¹ÓÃ16Î»¡£Äã¿ÉÒÔ»ìºÏ´îÅäÊ¹ÓÃ£¬µ«ÊÇË³Ðò¼Ç´í¿ÉÄÜ»áÕÐÖÂÂé·³£¬ÒòÎªÄÇ»á¸Ä±äÐ´ÈëÐ´³öµÄÖµ¡£ 
 
- `layer_state_set_*`å‡½æ•°ä¸­ä½¿ç”¨äº†`rgb_layer_change`ï¼Œä½¿ç”¨äº†`keyboard_post_init_user`å’Œ`process_record_user`æ¥é…ç½®ä¸€åˆ‡ã€‚
+ `layer_state_set_*`º¯ÊýÖÐÊ¹ÓÃÁË`rgb_layer_change`£¬Ê¹ÓÃÁË`keyboard_post_init_user`ºÍ`process_record_user`À´ÅäÖÃÒ»ÇÐ¡£
 
-é¦–å…ˆè¦ä½¿ç”¨`keyboard_post_init_userï¼Œä½ è¦åŠ å…¥`eeconfig_read_user()`æ¥å¡«å……ä½ åˆšåˆšåˆ›å»ºçš„ç»“æž„ä½“ã€‚ç„¶åŽæ‚¨å¯ä»¥ç«‹å³ä½¿ç”¨è¿™ä¸ªç»“æž„æ¥æŽ§åˆ¶æ‚¨çš„å¸ƒå±€ä¸­çš„åŠŸèƒ½ã€‚å°±åƒè¿™æ ·ï¼š 
+Ê×ÏÈÒªÊ¹ÓÃ`keyboard_post_init_user£¬ÄãÒª¼ÓÈë`eeconfig_read_user()`À´Ìî³äÄã¸Õ¸Õ´´½¨µÄ½á¹¹Ìå¡£È»ºóÄú¿ÉÒÔÁ¢¼´Ê¹ÓÃÕâ¸ö½á¹¹À´¿ØÖÆÄúµÄ²¼¾ÖÖÐµÄ¹¦ÄÜ¡£¾ÍÏñÕâÑù£º 
 ```c
 void keyboard_post_init_user(void) {
-  // è°ƒç”¨å¸ƒå±€çº§åˆ«çš„çŸ©é˜µåˆå§‹åŒ–
+  // µ÷ÓÃ²¼¾Ö¼¶±ðµÄ¾ØÕó³õÊ¼»¯
 
-  // ä»ŽEEPROMè¯»ç”¨æˆ·é…ç½®
+  // ´ÓEEPROM¶ÁÓÃ»§ÅäÖÃ
   user_config.raw = eeconfig_read_user();
 
-  // å¦‚ä½¿èƒ½ï¼Œè®¾ç½®é»˜è®¤å±‚
+  // ÈçÊ¹ÄÜ£¬ÉèÖÃÄ¬ÈÏ²ã
   if (user_config.rgb_layer_change) {
     rgblight_enable_noeeprom();
     rgblight_sethsv_noeeprom_cyan(); 
@@ -374,7 +374,7 @@ void keyboard_post_init_user(void) {
   }
 }
 ```
-ä»¥ä¸Šå‡½æ•°ä¼šåœ¨è¯»EEPROMé…ç½®åŽç«‹å³ä½¿ç”¨è¯¥è®¾ç½®æ¥è®¾ç½®é»˜è®¤å±‚RGBé¢œè‰²ã€‚"raw"çš„å€¼æ˜¯ä»Žä½ ä¸Šé¢åŸºäºŽ"union"åˆ›å»ºçš„ç»“æž„ä½“ä¸­è½¬æ¢æ¥çš„ã€‚ 
+ÒÔÉÏº¯Êý»áÔÚ¶ÁEEPROMÅäÖÃºóÁ¢¼´Ê¹ÓÃ¸ÃÉèÖÃÀ´ÉèÖÃÄ¬ÈÏ²ãRGBÑÕÉ«¡£"raw"µÄÖµÊÇ´ÓÄãÉÏÃæ»ùÓÚ"union"´´½¨µÄ½á¹¹ÌåÖÐ×ª»»À´µÄ¡£ 
 
 ```c
 uint32_t layer_state_set_user(uint32_t state) {
@@ -391,86 +391,86 @@ uint32_t layer_state_set_user(uint32_t state) {
     case _ADJUST:
         if (user_config.rgb_layer_change) { rgblight_sethsv_noeeprom_white(); rgblight_mode_noeeprom(1); }
         break;
-    default: //  é’ˆå¯¹å…¶ä»–å±‚æˆ–é»˜è®¤å±‚
+    default: //  Õë¶ÔÆäËû²ã»òÄ¬ÈÏ²ã
         if (user_config.rgb_layer_change) { rgblight_sethsv_noeeprom_cyan(); rgblight_mode_noeeprom(1); }
         break;
     }
   return state;
 }
 ```
-è¿™æ ·ä»…åœ¨å€¼ä½¿èƒ½æ—¶ä¼šæ”¹å˜RGBèƒŒå…‰ç¯ã€‚çŽ°åœ¨é…ç½®è¿™ä¸ªå€¼, ä¸º`process_record_user`åˆ›å»ºä¸€ä¸ªæ–°é”®ç å«åš`RGB_LYR`ã€‚æˆ‘ä»¬è¦ç¡®ä¿ï¼Œå¦‚æžœä½¿ç”¨æ­£å¸¸çš„RGBä»£ç ï¼Œä½¿ç”¨ä¸Šé¢çš„ç¤ºä¾‹å°†å…¶å…³é—­ï¼Œè¯·å°†å…¶è®¾ç½®ä¸ºï¼š
+ÕâÑù½öÔÚÖµÊ¹ÄÜÊ±»á¸Ä±äRGB±³¹âµÆ¡£ÏÖÔÚÅäÖÃÕâ¸öÖµ, Îª`process_record_user`´´½¨Ò»¸öÐÂ¼üÂë½Ð×ö`RGB_LYR`¡£ÎÒÃÇÒªÈ·±££¬Èç¹ûÊ¹ÓÃÕý³£µÄRGB´úÂë£¬Ê¹ÓÃÉÏÃæµÄÊ¾Àý½«Æä¹Ø±Õ£¬Çë½«ÆäÉèÖÃÎª£º
 ```c
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case FOO:
       if (record->event.pressed) {
-        // æŒ‰ä¸‹æ—¶åšç‚¹ä»€ä¹ˆ
+        // °´ÏÂÊ±×öµãÊ²Ã´
       } else {
-        // é‡Šæ”¾æ—¶åšç‚¹ä»€ä¹ˆ
+        // ÊÍ·ÅÊ±×öµãÊ²Ã´
       }
-      return false; // è·³è¿‡æ­¤é”®çš„è¿›ä¸€æ­¥å¤„ç†
+      return false; // Ìø¹ý´Ë¼üµÄ½øÒ»²½´¦Àí
     case KC_ENTER:
-        // åœ¨æŒ‰ä¸‹å›žè½¦æ—¶æ’­æ”¾éŸ³ç¬¦
+        // ÔÚ°´ÏÂ»Ø³µÊ±²¥·ÅÒô·û
         if (record->event.pressed) {
             PLAY_NOTE_ARRAY(tone_qwerty);
         }
-        return true; // è®©QMKäº§ç”Ÿå›žè½¦æŒ‰ä¸‹/é‡Šæ”¾äº‹ä»¶
-    case RGB_LYR:  // æœ¬å¥è®©underglowä½œä¸ºå±‚æŒ‡ç¤ºï¼Œæˆ–æ­£å¸¸ä½¿ç”¨ã€‚
+        return true; // ÈÃQMK²úÉú»Ø³µ°´ÏÂ/ÊÍ·ÅÊÂ¼þ
+    case RGB_LYR:  // ±¾¾äÈÃunderglow×÷Îª²ãÖ¸Ê¾£¬»òÕý³£Ê¹ÓÃ¡£
         if (record->event.pressed) { 
-            user_config.rgb_layer_change ^= 1; // åˆ‡æ¢çŠ¶æ€
-            eeconfig_update_user(user_config.raw); // å‘EEPROMå†™å…¥æ–°çŠ¶æ€
-            if (user_config.rgb_layer_change) { // å¦‚æžœå±‚çŠ¶æ€è¢«ä½¿èƒ½
-                layer_state_set(layer_state);   // é‚£ä¹ˆç«‹åˆ»æ›´æ–°å±‚é¢œè‰²
+            user_config.rgb_layer_change ^= 1; // ÇÐ»»×´Ì¬
+            eeconfig_update_user(user_config.raw); // ÏòEEPROMÐ´ÈëÐÂ×´Ì¬
+            if (user_config.rgb_layer_change) { // Èç¹û²ã×´Ì¬±»Ê¹ÄÜ
+                layer_state_set(layer_state);   // ÄÇÃ´Á¢¿Ì¸üÐÂ²ãÑÕÉ«
             }
         }
         return false; break;
-    case RGB_MODE_FORWARD ... RGB_MODE_GRADIENT: // å¯¹äºŽæ‰€æœ‰çš„RGBä»£ç  (see quantum_keycodes.h, L400 å¯ä»¥å‚è€ƒ)
-        if (record->event.pressed) { //æœ¬å¥å¤±èƒ½å±‚æŒ‡ç¤ºï¼Œå‡è®¾ä½ æ”¹å˜äº†è¿™ä¸ªâ€¦ä½ è¦æŠŠå®ƒç¦ç”¨
-            if (user_config.rgb_layer_change) {        // ä»…å½“ä½¿èƒ½æ—¶
-                user_config.rgb_layer_change = false;  // å¤±èƒ½ï¼Œç„¶åŽ 
-                eeconfig_update_user(user_config.raw); // å‘EEPROMå†™å…¥è®¾ç½®
+    case RGB_MODE_FORWARD ... RGB_MODE_GRADIENT: // ¶ÔÓÚËùÓÐµÄRGB´úÂë (see quantum_keycodes.h, L400 ¿ÉÒÔ²Î¿¼)
+        if (record->event.pressed) { //±¾¾äÊ§ÄÜ²ãÖ¸Ê¾£¬¼ÙÉèÄã¸Ä±äÁËÕâ¸ö¡­ÄãÒª°ÑËü½ûÓÃ
+            if (user_config.rgb_layer_change) {        // ½öµ±Ê¹ÄÜÊ±
+                user_config.rgb_layer_change = false;  // Ê§ÄÜ£¬È»ºó 
+                eeconfig_update_user(user_config.raw); // ÏòEEPROMÐ´ÈëÉèÖÃ
             }
         }
         return true; break;
     default:
-      return true; // æŒ‰å…¶ä»–é”®æ­£å¸¸
+      return true; // °´ÆäËû¼üÕý³£
   }
 }
 ```
-æœ€åŽä½ è¦åŠ å…¥`eeconfig_init_user`å‡½æ•°ï¼Œæ‰€ä»¥å½“EEPROMé‡ç½®æ—¶ï¼Œå¯ä»¥æŒ‡å®šé»˜è®¤å€¼, ç”šè‡³è‡ªå®šä¹‰æ“ä½œã€‚æƒ³å¼ºåˆ¶é‡ç½®EEPROMï¼Œè¯·ç”¨`EEP_RST`é”®ç æˆ–[Bootmagic](feature_bootmagic.md)å‡½æ•°ã€‚æ¯”å¦‚ï¼Œå¦‚æžœè¦åœ¨é»˜è®¤æƒ…å†µä¸‹è®¾ç½®RGBå±‚æŒ‡ç¤ºï¼Œå¹¶ä¿å­˜é»˜è®¤å€¼
+×îºóÄãÒª¼ÓÈë`eeconfig_init_user`º¯Êý£¬ËùÒÔµ±EEPROMÖØÖÃÊ±£¬¿ÉÒÔÖ¸¶¨Ä¬ÈÏÖµ, ÉõÖÁ×Ô¶¨Òå²Ù×÷¡£ÏëÇ¿ÖÆÖØÖÃEEPROM£¬ÇëÓÃ`EEP_RST`¼üÂë»ò[Bootmagic](feature_bootmagic.md)º¯Êý¡£±ÈÈç£¬Èç¹ûÒªÔÚÄ¬ÈÏÇé¿öÏÂÉèÖÃRGB²ãÖ¸Ê¾£¬²¢±£´æÄ¬ÈÏÖµ
 
 ```c
-void eeconfig_init_user(void) {  // EEPROMæ­£è¢«é‡ç½®
+void eeconfig_init_user(void) {  // EEPROMÕý±»ÖØÖÃ
   user_config.raw = 0;
-  user_config.rgb_layer_change = true; // æˆ‘ä»¬æƒ³è¦é»˜è®¤ä½¿èƒ½
-  eeconfig_update_user(user_config.raw); // å‘EEPROMå†™å…¥é»˜è®¤å€¼
+  user_config.rgb_layer_change = true; // ÎÒÃÇÏëÒªÄ¬ÈÏÊ¹ÄÜ
+  eeconfig_update_user(user_config.raw); // ÏòEEPROMÐ´ÈëÄ¬ÈÏÖµ
 
-  // use the non noeeprom versions, è¿˜è¦å‘EEPROMå†™å…¥è¿™äº›å€¼
-  rgblight_enable(); // é»˜è®¤ä½¿èƒ½RGB
-  rgblight_sethsv_cyan();  // é»˜è®¤è®¾ç½®é’è‰²
-  rgblight_mode(1); // é»˜è®¤è®¾ç½®é•¿äº®
+  // use the non noeeprom versions, »¹ÒªÏòEEPROMÐ´ÈëÕâÐ©Öµ
+  rgblight_enable(); // Ä¬ÈÏÊ¹ÄÜRGB
+  rgblight_sethsv_cyan();  // Ä¬ÈÏÉèÖÃÇàÉ«
+  rgblight_mode(1); // Ä¬ÈÏÉèÖÃ³¤ÁÁ
 }
 ```
 
-ç„¶åŽå°±å®Œäº‹äº†ã€‚RGBå±‚æŒ‡ç¤ºä¼šåœ¨ä½ æƒ³è®©å®ƒå·¥ä½œæ—¶å·¥ä½œã€‚è¿™ä¸ªè®¾ç½®ä¼šä¸€ç›´ä¿å­˜ï¼Œå³ä¾¿ä½ æ‹”ä¸‹é”®ç›˜ã€‚å¦‚æžœä½ ä½¿ç”¨å…¶ä»–RGBä»£ç ï¼Œå±‚æŒ‡ç¤ºå°†å¤±èƒ½ï¼ŒçŽ°åœ¨å®ƒå¯ä»¥åšä½ æ‰€æƒ³äº†ã€‚ 
+È»ºó¾ÍÍêÊÂÁË¡£RGB²ãÖ¸Ê¾»áÔÚÄãÏëÈÃËü¹¤×÷Ê±¹¤×÷¡£Õâ¸öÉèÖÃ»áÒ»Ö±±£´æ£¬¼´±ãÄã°ÎÏÂ¼üÅÌ¡£Èç¹ûÄãÊ¹ÓÃÆäËûRGB´úÂë£¬²ãÖ¸Ê¾½«Ê§ÄÜ£¬ÏÖÔÚËü¿ÉÒÔ×öÄãËùÏëÁË¡£ 
 
-### 'EECONFIG' å‡½æ•°æ–‡æ¡£
+### 'EECONFIG' º¯ÊýÎÄµµ
 
-* é”®ç›˜/ä¿®è®¢: `void eeconfig_init_kb(void)`, `uint32_t eeconfig_read_kb(void)`å’Œ`void eeconfig_update_kb(uint32_t val)`
-* å¸ƒå±€: `void eeconfig_init_user(void)`, `uint32_t eeconfig_read_user(void)`å’Œ`void eeconfig_update_user(uint32_t val)`
+* ¼üÅÌ/ÐÞ¶©: `void eeconfig_init_kb(void)`, `uint32_t eeconfig_read_kb(void)`ºÍ`void eeconfig_update_kb(uint32_t val)`
+* ²¼¾Ö: `void eeconfig_init_user(void)`, `uint32_t eeconfig_read_user(void)`ºÍ`void eeconfig_update_user(uint32_t val)`
 
-`val` æ˜¯ä½ æƒ³å†™å…¥EEPROMçš„å€¼ï¼Œ`eeconfig_read_*`å‡½æ•°ä¼šä»ŽEEPROMè¿”å›žä¸€ä¸ª32ä½(åŒå­—)çš„å€¼ã€‚
+`val` ÊÇÄãÏëÐ´ÈëEEPROMµÄÖµ£¬`eeconfig_read_*`º¯Êý»á´ÓEEPROM·µ»ØÒ»¸ö32Î»(Ë«×Ö)µÄÖµ¡£
 
-# è‡ªå®šä¹‰å‡»é”®-é•¿æŒ‰ä¸´ç•Œå€¼(TAPPING_TERM)
-é»˜è®¤æƒ…å†µä¸‹,å‡»é”®-é•¿æŒ‰ä¸´ç•Œå€¼æ˜¯å…¨çƒç»Ÿä¸€çš„ï¼Œå¹¶ä¸”ä¸èƒ½é€šè¿‡é”®è¿›è¡Œé…ç½®ã€‚å¯¹äºŽå¤§å¤šæ•°ç”¨æˆ·æ¥è¯´è¿™å¾ˆå¥½ã€‚ä½†æ˜¯åœ¨æœ‰äº›æƒ…å†µä¸‹ï¼Œå¯¹äºŽ`LT`é”®æ¥è¯´æŒ‰é”®å»¶æ—¶å¯¹åŒåŠŸèƒ½é”®çš„æå‡æ›´å¤§ï¼Œå¯èƒ½æ˜¯å› ä¸ºæœ‰äº›é”®æ¯”å…¶ä»–çš„é”®æ›´å®¹æ˜“æŒ‰ä½ã€‚ä¸ºäº†ä¸ç»™æ¯ä¸ªéƒ½è‡ªå®šä¹‰é”®ç ï¼Œæœ¬åŠŸèƒ½å¯ä»¥ä¸ºæ¯ä¸ªé”®å®šä¹‰`TAPPING_TERM`ã€‚
+# ×Ô¶¨Òå»÷¼ü-³¤°´ÁÙ½çÖµ(TAPPING_TERM)
+Ä¬ÈÏÇé¿öÏÂ,»÷¼ü-³¤°´ÁÙ½çÖµÊÇÈ«ÇòÍ³Ò»µÄ£¬²¢ÇÒ²»ÄÜÍ¨¹ý¼ü½øÐÐÅäÖÃ¡£¶ÔÓÚ´ó¶àÊýÓÃ»§À´ËµÕâºÜºÃ¡£µ«ÊÇÔÚÓÐÐ©Çé¿öÏÂ£¬¶ÔÓÚ`LT`¼üÀ´Ëµ°´¼üÑÓÊ±¶ÔË«¹¦ÄÜ¼üµÄÌáÉý¸ü´ó£¬¿ÉÄÜÊÇÒòÎªÓÐÐ©¼ü±ÈÆäËûµÄ¼ü¸üÈÝÒ×°´×¡¡£ÎªÁË²»¸øÃ¿¸ö¶¼×Ô¶¨Òå¼üÂë£¬±¾¹¦ÄÜ¿ÉÒÔÎªÃ¿¸ö¼ü¶¨Òå`TAPPING_TERM`¡£
 
-æƒ³ä½¿èƒ½è¿™ä¸ªåŠŸèƒ½çš„è¯, è¦å…ˆåœ¨`config.h`åŠ ä¸Š`#define TAPPING_TERM_PER_KEY`ã€‚
+ÏëÊ¹ÄÜÕâ¸ö¹¦ÄÜµÄ»°, ÒªÏÈÔÚ`config.h`¼ÓÉÏ`#define TAPPING_TERM_PER_KEY`¡£
 
 
-## `get_tapping_term`ç¤ºä¾‹å®žçŽ°
+## `get_tapping_term`Ê¾ÀýÊµÏÖ
 
-æƒ³è¦ä¿®æ”¹åŸºäºŽé”®ç çš„`TAPPING TERM`,ä½ è¦å‘`keymap.c`æ–‡ä»¶æ·»åŠ å¦‚ä¸‹ä»£ç : 
+ÏëÒªÐÞ¸Ä»ùÓÚ¼üÂëµÄ`TAPPING TERM`,ÄãÒªÏò`keymap.c`ÎÄ¼þÌí¼ÓÈçÏÂ´úÂë: 
 
 ```c
 uint16_t get_tapping_term(uint16_t keycode) {
@@ -485,6 +485,6 @@ uint16_t get_tapping_term(uint16_t keycode) {
 }
 ```
 
-### `get_tapping_term` å‡½æ•°æ–‡æ¡£
+### `get_tapping_term` º¯ÊýÎÄµµ
 
-ä¸åƒè¿™ç¯‡çš„å…¶ä»–åŠŸèƒ½,è¿™ä¸ªä¸éœ€è¦quantumæˆ–è€…é”®ç›˜çº§åˆ«çš„å‡½æ•°ï¼Œåªè¦ç”¨æˆ·çº§å‡½æ•°å³å¯ã€‚
+²»ÏñÕâÆªµÄÆäËû¹¦ÄÜ,Õâ¸ö²»ÐèÒªquantum»òÕß¼üÅÌ¼¶±ðµÄº¯Êý£¬Ö»ÒªÓÃ»§¼¶º¯Êý¼´¿É¡£

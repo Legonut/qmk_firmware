@@ -27,6 +27,10 @@
 #include "ch.h"
 #include <hal.h>
 
+#if defined(STM32F1XX) || defined(STM32F1xx) || defined(STM32F2xx) || defined(STM32F4xx) || defined(STM32F4XX) || defined(STM32L0xx) || defined(STM32L1xx)
+#    define USE_I2CV1
+#endif
+
 #ifdef I2C1_BANK
 #    define I2C1_SCL_BANK I2C1_BANK
 #    define I2C1_SDA_BANK I2C1_BANK
@@ -45,6 +49,20 @@
 #endif
 #ifndef I2C1_SDA
 #    define I2C1_SDA 7
+#endif
+
+#if defined(STM32F1XX) || defined(STM32F1xx)
+#    define USE_GPIOV1
+#endif
+
+#ifndef USE_GPIOV1
+// The default PAL alternate modes are used to signal that the pins are used for I2C
+#    ifndef I2C1_SCL_PAL_MODE
+#        define I2C1_SCL_PAL_MODE 4
+#    endif
+#    ifndef I2C1_SDA_PAL_MODE
+#        define I2C1_SDA_PAL_MODE 4
+#    endif
 #endif
 
 #ifdef USE_I2CV1
@@ -81,16 +99,6 @@
 #    define I2C_DRIVER I2CD1
 #endif
 
-#ifndef USE_GPIOV1
-// The default PAL alternate modes are used to signal that the pins are used for I2C
-#    ifndef I2C1_SCL_PAL_MODE
-#        define I2C1_SCL_PAL_MODE 4
-#    endif
-#    ifndef I2C1_SDA_PAL_MODE
-#        define I2C1_SDA_PAL_MODE 4
-#    endif
-#endif
-
 typedef int16_t i2c_status_t;
 
 #define I2C_STATUS_SUCCESS (0)
@@ -101,6 +109,7 @@ void         i2c_init(void);
 i2c_status_t i2c_start(uint8_t address);
 i2c_status_t i2c_transmit(uint8_t address, const uint8_t* data, uint16_t length, uint16_t timeout);
 i2c_status_t i2c_receive(uint8_t address, uint8_t* data, uint16_t length, uint16_t timeout);
+i2c_status_t i2c_transmit_receive(uint8_t address, uint8_t* tx_body, uint16_t tx_length, uint8_t* rx_body, uint16_t rx_length);
 i2c_status_t i2c_writeReg(uint8_t devaddr, uint8_t regaddr, const uint8_t* data, uint16_t length, uint16_t timeout);
 i2c_status_t i2c_readReg(uint8_t devaddr, uint8_t regaddr, uint8_t* data, uint16_t length, uint16_t timeout);
 void         i2c_stop(void);

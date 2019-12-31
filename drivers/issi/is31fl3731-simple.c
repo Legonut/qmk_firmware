@@ -16,9 +16,21 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifdef __AVR__
+#    include <avr/interrupt.h>
+#    include <avr/io.h>
+#    include <util/delay.h>
+#else
+#    include "wait.h"
+#endif
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
 #include "is31fl3731-simple.h"
 #include "i2c_master.h"
-#include "wait.h"
+#include "progmem.h"
+#include "print.h"
 
 // This is a 7-bit address, that gets left-shifted and bit 0
 // set to 0 for write, 1 for read (as per I2C protocol)
@@ -144,7 +156,6 @@ void IS31FL3731_init(uint8_t addr) {
 
     // enable software shutdown
     IS31FL3731_write_register(addr, ISSI_REG_SHUTDOWN, 0x00);
-
     // this delay was copied from other drivers, might not be needed
     wait_ms(10);
 

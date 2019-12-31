@@ -13,5 +13,4 @@ Jetfire V1
 Lightsaver V3  
 Octagon V1  
 Octagon V2  
-Orion V3  
 Viper V2  
