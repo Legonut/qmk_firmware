@@ -26,8 +26,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         Pan
 #define DESCRIPTION     "An universal ortho or staggered full RGB keyboard"
 
-/* WS2812 RGB LED Din */
-#define RGB_DI_PIN B3
+#ifdef PROTON_C 
+  #define RGB_DI_PIN B5
+#else 
+  #define RGB_DI_PIN B3
+#endif
 
 /* TODO: Encoder rotation pads */
 #define ENCODERS_PAD_A { 0, 0 }
@@ -43,4 +46,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 #define DRIVER_LED_TOTAL RGBLED_NUM
 
-#define RGB_MATRIX_CENTER { 112, 35 }
+#define RGB_MATRIX_CENTER { 114, 38 }

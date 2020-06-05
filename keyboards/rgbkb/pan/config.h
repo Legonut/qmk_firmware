@@ -25,19 +25,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* key matrix */
 #define DIODE_DIRECTION COL2ROW
 
-// Rows are doubled-up
-#define MATRIX_COLS 13
-#define MATRIX_COL_PINS { C3, C4, C5, C6, C7, A7, A6, A5, A4, A3, A2, A1, A0 }
 
-// wiring of each half
+#define MATRIX_COLS 13
 #define MATRIX_ROWS 5
-#define MATRIX_ROW_PINS { D7, D1, D5, D6, C2 }
+#ifdef PROTON_C 
+  #define MATRIX_COL_PINS { A8, A6, B0, B1, B2, B4, A3, A1, A2, B3, B9, A10, A9 }
+  #define MATRIX_ROW_PINS { A15, B10, A14, A13, A7 }
+#else 
+  #define MATRIX_COL_PINS { C3, C4, C5, C6, C7, A7, A6, A5, A4, A3, A2, A1, A0 }
+  #define MATRIX_ROW_PINS { D7, D1, D5, D6, C2 }
+#endif
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
 #ifdef IOS_DEVICE_ENABLE
-  #define RGBLIGHT_LIMIT_VAL 40
+  #define RGBLIGHT_LIMIT_VAL 100
 #elif RGBLIGHT_FULL_POWER
   #define RGBLIGHT_LIMIT_VAL 255
 #else
@@ -50,12 +53,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_ANIMATIONS
 
 #if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
-// USB_MAX_POWER_CONSUMPTION value for Helix keyboard
-//  120  RGBoff, OLEDoff
-//  120  OLED
-//  330  RGB 6
-//  300  RGB 32
-//  310  OLED & RGB 32
   #define USB_MAX_POWER_CONSUMPTION 500
 #else
   // fix iPhone and iPad power adapter issue
